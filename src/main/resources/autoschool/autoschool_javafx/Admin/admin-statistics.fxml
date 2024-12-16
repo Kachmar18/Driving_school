@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="680.0" prefWidth="1400.0" style="-fx-background-color: #f7e573;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoschool.autoschool_javafx.Admin.AdminStatistics">
+   <Label fx:id="statisticsLabel" layoutX="50.0" layoutY="16.0" prefHeight="53.0" prefWidth="678.0" styleClass="label-for-header" stylesheets="@../Css/menu-style.css" text="Статистика" />
+   <ImageView fx:id="nextBarIcon" fitHeight="45.0" fitWidth="45.0" layoutX="1335.0" layoutY="318.0" onMouseClicked="#showNextChart" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Icons/next_icon.png" />
+   </ImageView>
+   <ImageView fx:id="endBarIcon" fitHeight="45.0" fitWidth="45.0" layoutX="20.0" layoutY="318.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#showPreviousChart" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Icons/next_icon.png" />
+   </ImageView>
+   <PieChart fx:id="pieChart" labelLineLength="10.0" layoutX="80.0" layoutY="60.0" legendSide="LEFT" prefHeight="568.0" prefWidth="1240.0" stylesheets="@../Css/charts-style.css" title="Тестування студентів" />
+   <BarChart fx:id="barChart" blendMode="DARKEN" layoutX="80.0" layoutY="60.0" legendVisible="false" prefHeight="568.0" prefWidth="1240.0" stylesheets="@../Css/charts-style.css" title="Навантаженість курсів" visible="false">
+     <xAxis>
+       <CategoryAxis endMargin="0.0" tickLabelRotation="45.0">
+            <tickLabelFont>
+               <Font name="Mariupol-Regular" size="15.0" />
+            </tickLabelFont></CategoryAxis>
+     </xAxis>
+     <yAxis>
+       <NumberAxis autoRanging="false" side="LEFT" upperBound="10.0">
+            <tickLabelFont>
+               <Font name="Mariupol-Regular" size="15.0" />
+            </tickLabelFont></NumberAxis>
+     </yAxis>
+   </BarChart>
+   <LineChart fx:id="lineChart" blendMode="DARKEN" layoutX="80.0" layoutY="60.0" legendVisible="false" prefHeight="568.0" prefWidth="1240.0" stylesheets="@../Css/charts-style.css" title="Кількість проведених практичних занять" visible="false">
+     <xAxis>
+       <CategoryAxis side="BOTTOM">
+            <tickLabelFont>
+               <Font name="Mariupol-Regular" size="15.0" />
+            </tickLabelFont></CategoryAxis>
+     </xAxis>
+     <yAxis>
+       <NumberAxis autoRanging="false" side="LEFT" upperBound="15.0">
+            <tickLabelFont>
+               <Font name="Mariupol-Regular" size="15.0" />
+            </tickLabelFont></NumberAxis>
+     </yAxis>
+   </LineChart>
+    <HBox alignment="TOP_CENTER" layoutY="643.0" prefHeight="23.0" prefWidth="1400.0" spacing="10.0">
+        <Circle fx:id="dot1" fill="#CCCCCC" radius="7.0" />
+        <Circle fx:id="dot2" fill="#CCCCCC" radius="7.0" />
+        <Circle fx:id="dot3" fill="#CCCCCC" radius="7.0" />
+    </HBox>
+</Pane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1400.0" styleClass="root" stylesheets="@Css/enter-system-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoschool.autoschool_javafx.LoginWindow">
+    <JFXButton fx:id="loginButton" layoutX="606.0" layoutY="491.0" onAction="#loginButton" prefHeight="45.0" prefWidth="600.0" styleClass="jfx-button" text="Увійти в систему" AnchorPane.bottomAnchor="110.0" AnchorPane.rightAnchor="65.0" />
+    <JFXButton fx:id="createNewAccount" layoutX="328.0" layoutY="539.0" onAction="#createNewAccount" prefHeight="45.0" prefWidth="450.0" styleClass="jfx-button" text="Створити акаунт" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="60.0" />
+   <JFXButton fx:id="forgetPasswordButton" layoutX="574.0" layoutY="281.0" onAction="#forgetPasswordButton" styleClass="jfx-button" text="Забули пароль?" wrapText="true" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="310.0" />
+    <JFXButton fx:id="returnButton" layoutX="35.0" layoutY="544.0" onAction="#returnButton" prefWidth="235.0" styleClass="jfx-exit-button" text="Повернутись назад" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0">
+        <graphic>
+            <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@Icons/Return_icon.png" />
+            </ImageView>
+        </graphic>
+    </JFXButton>
+    <ImageView fx:id="roleIcon" fitHeight="55.0" fitWidth="60.0" layoutX="750.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="42.0">
+        <Image url="@Icons/Student_icon.png" />
+    </ImageView>
+    <Label fx:id="roleLabel" layoutX="1235.0" layoutY="58.0" styleClass="label-for-role" text="Студент" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="58.0" />
+    <Label fx:id="loginTitleLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="42.0" prefHeight="54.0" prefWidth="1400.0" styleClass="label-for-logo" text="Увійти в систему" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="42.0" />
+    <TextField fx:id="emailTextField" layoutX="234.0" layoutY="140.0" minWidth="-Infinity" prefHeight="35.0" prefWidth="400.0" promptText="example@your.email" styleClass="text-field" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="170.0" />
+    <PasswordField fx:id="passwordTextField" layoutX="350.0" layoutY="210.0" maxHeight="35.0" minHeight="35.0" prefHeight="35.0" prefWidth="346.0" styleClass="text-field" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="240.0" />
+    <Label fx:id="emailLabel" layoutX="50.0" layoutY="140.0" prefHeight="35.0" styleClass="label-for-normal" text="Введіть електронну пошту" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="170.0" />
+    <Label fx:id="passwordLabel" layoutX="50.0" layoutY="210.0" prefHeight="35.0" styleClass="label-for-normal" text="Введіть пароль" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="240.0" />
+    <TextField fx:id="firstNameTextField" layoutX="586.0" layoutY="344.0" prefHeight="35.0" prefWidth="470.0" promptText="Ваше ім'я" styleClass="text-field" visible="false" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="380.0" />
+    <TextField fx:id="lastNameTextField" layoutX="350.0" layoutY="344.0" prefHeight="35.0" prefWidth="470.0" promptText="Ваше прізвище" styleClass="text-field" visible="false" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="380.0" />
+    <Label fx:id="namingLabel" layoutX="50.0" layoutY="111.0" prefHeight="35.0" styleClass="label-for-normal" text="Введіть прізвище та ім'я" visible="false" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="380.0" />
+   <ToggleButton fx:id="showPasswordButton" layoutX="707.0" layoutY="209.0" maxHeight="35.0" minHeight="35.0" onAction="#showPasswordButton" prefHeight="35.0" prefWidth="29.0" style="-fx-background-color: #F5F5F5;" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="240.0">
+      <graphic>
+          <ImageView fx:id="passwordIcon" disable="true" fitHeight="31.2" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+              <Image url="@Icons/hide_icon.png" />
+          </ImageView>
+      </graphic></ToggleButton>
+   <Label fx:id="errorTipLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="350.0" layoutY="422.0" prefHeight="20.0" prefWidth="511.0" styleClass="error-label" text="* Заповніть усі поля, виділені червоним" textFill="#ff2020" visible="false" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="550.0">
+      <font>
+         <Font name="Arial Bold Italic" size="16.0" />
+      </font>
+   </Label>
+</AnchorPane>

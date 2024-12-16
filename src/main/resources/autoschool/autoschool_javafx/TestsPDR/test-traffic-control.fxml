@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1400.0" style="-fx-background-color: #d4eaf7;" stylesheets="@../Css/additional-window-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoschool.autoschool_javafx.TestsPDR.TrafficControlTestWindow">
+   <Label fx:id="trafficControlTestLabel" layoutX="29.0" layoutY="10.0" prefHeight="105.0" prefWidth="1344.0" styleClass="label-for-test" text="Тест ПДР: Регулювання дорожнього руху (нерегульовані перехрестя)" wrapText="true" />
+   <JFXButton fx:id="doneTestButton" layoutX="834.0" layoutY="620.0" minHeight="40.0" minWidth="500.0" onAction="#doneTestButton" prefWidth="500.0" styleClass="jfx-button" text="Завершити тестування">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/save_icon.png" />
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <JFXButton fx:id="returnButton" alignment="BASELINE_LEFT" layoutX="30.0" layoutY="620.0" minWidth="250.0" onAction="#returnButton" styleClass="jfx-button-return" text="Повернутись назад">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/Return_icon.png" />
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <Label fx:id="errorTipLabel" alignment="CENTER_RIGHT" layoutX="834.0" layoutY="585.0" prefWidth="500.0" styleClass="error-label" text="* Заповніть усі поля, виділені червоним" textFill="#ff2020" visible="false">
+      <font>
+         <Font name="Arial Bold Italic" size="16.0" />
+      </font>
+   </Label>
+   <ScrollPane layoutX="29.0" layoutY="134.0" prefHeight="455.0" prefWidth="1344.0" style="-fx-background-color: #d4eaf7;">
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1700.0" prefWidth="1328.0" style="-fx-background-color: #d4eaf7;">
+         <Pane layoutX="-15.0" layoutY="-2.0" prefHeight="632.0" prefWidth="1336.0" style="-fx-background-color: #d4eaf7;" stylesheets="@../Css/additional-window-style.css">
+            <Label layoutX="14.0" layoutY="-5.0" styleClass="label-number" text="№1" textFill="#b2d609" />
+            <Label fx:id="questionLabelTC_1" layoutX="90.0" layoutY="2.0" prefWidth="1089.0" styleClass="label-question" text="У якому напрямку Вам дозволено рух?" />
+            <ImageView fitHeight="198.0" fitWidth="416.0" layoutX="81.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../Icons/Icons_Traffic_Control_Test/task_1.jpg" />
+            </ImageView>
+            <Label layoutX="14.0" layoutY="239.0" styleClass="label-number" text="№2" textFill="#b2d609" />
+            <Label fx:id="questionLabelTC_2" layoutX="81.0" layoutY="246.0" styleClass="label-question" text="На якому малюнку зображено тимчасовий дорожній знак?" />
+            <ImageView fitHeight="230.0" fitWidth="582.0" layoutX="81.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../Icons/Icons_Traffic_Control_Test/task_2.jpg" />
+            </ImageView>
+            <JFXRadioButton fx:id="task2TC_1RB" layoutX="714.0" layoutY="303.0" text="На малюнку 1" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_2" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task2TC_2RB" layoutX="714.0" layoutY="354.0" text="На малюнку 2" textFill="#01141d" toggleGroup="$task_2">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task2TC_3RB" layoutX="714.0" layoutY="402.0" text="На малюнку 3" textFill="#01141d" toggleGroup="$task_2">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="18.0" layoutY="459.0" styleClass="label-number" text="№3" textFill="#b2d609" />
+            <Label fx:id="questionLabelTC_3" layoutX="81.0" layoutY="466.0" styleClass="label-question" text="Яке значення має жовтий миготливий сигнал світлофора в даній ситуації?" />
+            <ImageView fitHeight="236.0" fitWidth="500.0" layoutX="90.0" layoutY="517.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../Icons/Icons_Traffic_Control_Test/task_3.jpg" />
+            </ImageView>
+            <Label layoutX="14.0" layoutY="771.0" styleClass="label-number" text="№4" textFill="#b2d609" />
+            <Label fx:id="questionLabelTC_4" layoutX="90.0" layoutY="778.0" styleClass="label-question" text="Чим Ви як водій повинні керуватися, якщо вимоги дорожніх знаків суперечать вимогам дорожньої розмітки?" />
+            <Label layoutX="14.0" layoutY="964.0" styleClass="label-number" text="№5" textFill="#b2d609" />
+            <Label fx:id="questionLabelTC_5" layoutX="90.0" layoutY="959.0" prefHeight="74.0" prefWidth="1242.0" styleClass="label-question" text="Чим Ви як водій повинні керуватися, якщо вимоги тимчасових дорожніх знаків суперечать вимогам постійних дорожніх знаків?" wrapText="true" />
+            <JFXRadioButton fx:id="task5TC_1RB" layoutX="90.0" layoutY="1029.0" text="Тимчасовими дорожніми знаками" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_5" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task5TC_2RB" layoutX="90.0" layoutY="1076.0" text="Постійними дорожніми знаками" textFill="#01141d" toggleGroup="$task_5">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task5TC_3RB" layoutX="90.0" layoutY="1123.0" text="Вимогами дорожньої розмітки" textFill="#01141d" toggleGroup="$task_5">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="14.0" layoutY="1163.0" styleClass="label-number" text="№6" textFill="#b2d609" />
+            <Label fx:id="questionLabelTC_6" layoutX="90.0" layoutY="1170.0" styleClass="label-question" text="Як розміщуються тимчасові дорожні знаки?" />
+            <JFXRadioButton fx:id="task6TC_1RB" layoutX="90.0" layoutY="1228.0" text="На переносних пристроях і дорожньому обладнанні" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_6" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task6TC_2RB" layoutX="90.0" layoutY="1275.0" text="Закріплюються на щиті з фоном жовтого кольору" textFill="#01141d" toggleGroup="$task_6">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task6TC_3RB" layoutX="92.0" layoutY="1318.0" text="Встановлюються над постійними дорожніми знаками" textFill="#01141d" toggleGroup="$task_6">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="16.0" layoutY="1436.0" styleClass="label-number" text="№7" textFill="#b2d609" />
+            <Label fx:id="questionLabelTC_7" layoutX="92.0" layoutY="1439.0" prefHeight="73.0" prefWidth="1222.0" styleClass="label-question" text="Знаки якої групи заздалегідь зобов'язують вжити заходів для безпечного проїзду при наближенні до небезпечної ділянки дороги або іншої небезпеки?" wrapText="true" />
+            <JFXRadioButton fx:id="task7TC_1RB" layoutX="90.0" layoutY="1517.0" prefHeight="43.0" prefWidth="1222.0" text="Попереджувальні знаки" textFill="#01141d" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_7" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task7TC_2RB" layoutX="91.0" layoutY="1565.0" prefWidth="1222.0" text="Знаки сервісу" textFill="#01141d" toggleGroup="$task_7" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task1TC_1RB" layoutX="709.0" layoutY="36.0" text="У напрямку А" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_1" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task1TC_2RB" layoutX="709.0" layoutY="83.0" text="У напрямках А і В" textFill="#01141d" toggleGroup="$task_1">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task1TC_3RB" layoutX="709.0" layoutY="130.0" text="У напрямках Б і В" textFill="#01141d" toggleGroup="$task_1">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task1TC_4RB" layoutX="709.0" layoutY="176.0" text="У напрямках А, Б і В" textFill="#01141d" toggleGroup="$task_1">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task1TC_5RB" layoutX="709.0" layoutY="219.0" text="У напрямку В" textFill="#01141d" toggleGroup="$task_1">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+         </Pane>
+         <JFXRadioButton fx:id="task3TC_1RB" layoutX="697.0" layoutY="565.0" text="Забороняє рух транспортних засобів" textFill="#01141d">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+            <toggleGroup>
+               <ToggleGroup fx:id="task_3" />
+            </toggleGroup>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="task3TC_2RB" layoutX="697.0" layoutY="616.0" text="Дозволяє рух й інформує про наявність небезпечного нерегульованого перехрестя" textFill="#01141d" toggleGroup="$task_3">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="task3TC_3RB" layoutX="697.0" layoutY="664.0" text="Вимагає від водіїв обов'язкової зупинки" textFill="#01141d" toggleGroup="$task_3">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="task4TC_1RB" layoutX="76.0" layoutY="824.0" text="Вимогами дорожньої розмітки" textFill="#01141d">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+            <toggleGroup>
+               <ToggleGroup fx:id="task_4" />
+            </toggleGroup>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="task4TC_2RB" layoutX="76.0" layoutY="871.0" text="Вимогами дорожніх знаків" textFill="#01141d" toggleGroup="$task_4">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="task4TC_3RB" layoutX="76.0" layoutY="918.0" text="На розсуд водія" textFill="#01141d" toggleGroup="$task_4">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="task6TC_4RB" layoutX="76.0" layoutY="1359.0" text="Відповіді 1, 2 і 3" textFill="#01141d" toggleGroup="$task_6">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="task6TC_5RB" layoutX="76.0" layoutY="1396.0" text="Відповіді 1 і 2" textFill="#01141d" toggleGroup="$task_6">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="task7TC_4RB" layoutX="77.0" layoutY="1635.0" text="Наказові знаки" textFill="#01141d" toggleGroup="$task_7">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="task7TC_5RB" layoutX="76.0" layoutY="1669.0" text="Інформаційно-вказівні знаки" textFill="#01141d" toggleGroup="$task_7">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="task7TC_3RB" layoutX="76.0" layoutY="1600.0" text="Заборонні знаки" textFill="#01141d" toggleGroup="$task_7">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+      </AnchorPane>
+   </ScrollPane>
+</Pane>

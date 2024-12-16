@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="680.0" prefWidth="1400.0" style="-fx-background-color: #d4eaf7;" stylesheets="@../Css/menu-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoschool.autoschool_javafx.TestsPDR.TestsSplitWindow">
+   <Label fx:id="testPDRTopics" layoutX="552.0" layoutY="288.0" style="-fx-font-size: 30;" styleClass="label-form" text="Тести ПДР по темам" />
+   <Label fx:id="questions_20" layoutX="654.0" layoutY="156.0" style="-fx-font-size: 15;" styleClass="label-form" text="20 запитань" />
+   <Label fx:id="questions_14" layoutX="276.0" layoutY="498.0" style="-fx-font-size: 15;" styleClass="label-form" text="14 запитань" />
+   <Label fx:id="questions_7" layoutX="980.0" layoutY="498.0" style="-fx-font-size: 15;" styleClass="label-form" text="7 запитань" />
+   <ImageView disable="true" fitHeight="60.0" fitWidth="59.0" layoutX="1252.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+      <viewport>
+         <Rectangle2D minX="100.0" width="100.0" />
+      </viewport>
+      <Image url="@../Icons/next_icon.png" />
+   </ImageView>
+   <ImageView disable="true" fitHeight="50.0" fitWidth="50.0" layoutX="552.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Icons/next_icon.png" />
+   </ImageView>
+   <ImageView disable="true" fitHeight="50.0" fitWidth="50.0" layoutX="1281.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Icons/next_icon.png" />
+   </ImageView>
+   <JFXButton fx:id="passExamButton" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="50.0" onAction="#passExamButton" prefHeight="153.0" prefWidth="1300.0" styleClass="jfx-button-split-tests" text="Пройти іспит" textAlignment="CENTER">
+      <padding>
+         <Insets bottom="20.0" />
+      </padding>
+   </JFXButton>
+   <JFXButton fx:id="trainingRideTestButton" alignment="CENTER" contentDisplay="TOP" graphicTextGap="40.0" layoutX="40.0" layoutY="357.0" minHeight="111.0" minWidth="539.0" onAction="#trainingRideTestButton" prefHeight="185.0" prefWidth="590.0" styleClass="jfx-button-split-tests" text="Навчальна їзда" textAlignment="CENTER" />
+   <JFXButton fx:id="trafficControlTestButton" alignment="CENTER" contentDisplay="TOP" graphicTextGap="40.0" layoutX="694.0" layoutY="357.0" minHeight="111.0" minWidth="539.0" onAction="#trafficControlTestButton" prefHeight="185.0" prefWidth="656.0" styleClass="jfx-button-split-tests" text="Регулювання дорожнього руху (нерегульовані перехрестя)" textAlignment="CENTER" wrapText="true">
+      <padding>
+         <Insets bottom="20.0" right="20.0" />
+      </padding>
+   </JFXButton>
+   <Hyperlink fx:id="hyperlinkTests" alignment="CENTER" layoutX="452.0" layoutY="614.0" onAction="#openHyperlinkTests" prefHeight="34.0" prefWidth="590.0" style="-fx-font-size: 17;" text="Для додаткових тестів з водіння, клікніть на це посилання" />
+</Pane>

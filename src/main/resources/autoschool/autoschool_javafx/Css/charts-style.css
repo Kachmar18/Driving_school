@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Mariupol-Regular';
+    src: url('Mariupol-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Lena';
+    src: url('Lena.ttf');
+}
+
+.chart-title {
+    -fx-font-size: 30px;
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-text-fill: #01141d;
+    -fx-padding: 10;
+}
+
+.chart-legend {
+   -fx-background-color: #fafad2;
+   -fx-stroke: #daa520;
+
+   -fx-font-size: 20px;
+   -fx-font-family: 'Mariupol-Regular';
+   -fx-fill: #005B99;
+   -fx-padding: 10;
+}
+
+.chart-pie-label {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-fill: #01141d;
+}
+
+.chart-pie-label-line {
+    -fx-stroke: #005B99;
+    -fx-fill: #005B99;
+}
+
+
+.default-color0.chart-series-line {
+    -fx-stroke: #005B99;
+}
+
+

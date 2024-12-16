@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" styleClass="root" stylesheets="@../Css/menu-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoschool.autoschool_javafx.Instructor.InstructorMenuWindow">
+    <Pane prefHeight="70.0" prefWidth="1400.0" style="-fx-background-color: white;">
+        <Label fx:id="menuLabel" layoutX="52.0" layoutY="17.5" onMouseEntered="#showSliderPane" prefHeight="35.0" style="-fx-font-size: 20;" styleClass="label-for-normal" stylesheets="@../Css/menu-style.css" text="Меню" />
+        <ImageView fitHeight="34.0" fitWidth="72.0" layoutX="14.0" layoutY="17.5" onMouseEntered="#showSliderPane" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/menu1.png" />
+        </ImageView>
+        <JFXButton fx:id="theoryScheduleMenuButton" layoutX="150.0" layoutY="17.5" maxWidth="210.0" minWidth="400.0" onAction="#handleTheorySchedule" prefHeight="35.0" prefWidth="210.0" styleClass="menuItem" stylesheets="@../Css/menu-style.css" text="Теорія" />
+        <JFXButton fx:id="practiceMenuButton" layoutX="570.0" layoutY="17.5" maxWidth="150.0" minWidth="400.0" onAction="#handlePractice" prefHeight="35.0" prefWidth="210.0" styleClass="menuItem" stylesheets="@../Css/menu-style.css" text="Практика" />
+      <JFXButton fx:id="testsMenuButton" layoutX="990.0" layoutY="17.5" maxWidth="150.0" minWidth="400.0" onAction="#handleTests" prefHeight="35.0" prefWidth="210.0" styleClass="menuItem" stylesheets="@../Css/menu-style.css" text="Тести з ПДР" />
+    </Pane>
+    <AnchorPane layoutY="70.0" prefHeight="680.0" prefWidth="1400.0">
+        <ImageView fitHeight="350.0" fitWidth="350.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="525.0" AnchorPane.topAnchor="120.0">
+            <Image url="@../Gifs/human-resources-ezgif.com-gif-maker.gif" />
+        </ImageView>
+      <Label fx:id="searchTipLabel" styleClass="label-search" stylesheets="@../Css/menu-style.css" text="Оберіть пункт з меню, щоб почати роботу" AnchorPane.leftAnchor="440.0" AnchorPane.topAnchor="460.0" />
+        <StackPane fx:id="contentArea" prefHeight="680.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+    </AnchorPane>
+    <Pane layoutY="60.0" prefHeight="540.0" prefWidth="40.0" styleClass="sidebar" stylesheets="@../Css/Style_test.css" visible="false">
+        <ImageView fitHeight="37.0" fitWidth="40.0" layoutX="1.0" layoutY="388.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/settings(1_icon).png" />
+        </ImageView>
+        <ImageView fitHeight="37.0" fitWidth="40.0" layoutX="1.0" layoutY="491.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/ExitProgram_icon.png" />
+        </ImageView>
+        <ImageView fitHeight="37.0" fitWidth="40.0" layoutX="5.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/exam.png" />
+        </ImageView>
+        <ImageView fitHeight="37.0" fitWidth="40.0" layoutX="2.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/practice_icon.png" />
+        </ImageView>
+        <ImageView fitHeight="37.0" fitWidth="40.0" layoutX="1.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/theory_icon.png" />
+        </ImageView>
+        <ImageView fitHeight="37.0" fitWidth="40.0" layoutX="1.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/course_icon.png" />
+        </ImageView>
+    </Pane>
+    <Pane fx:id="sliderPane" layoutX="-270.0" layoutY="70.0" onMouseExited="#hideSliderPane" prefHeight="682.0" prefWidth="270.0" style="-fx-background-color: #2e4053;">
+        <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="5.0" layoutY="7.0" prefHeight="690.0" prefWidth="265.0" spacing="15.0">
+            <ImageView fx:id="roleIcon" fitHeight="64.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../Icons/Instructor_icon.png" />
+            <VBox.margin>
+               <Insets top="15.0" />
+            </VBox.margin>
+            </ImageView>
+         <Label fx:id="initialsLabel" style="-fx-font-size: 20;" styleClass="label-for-normal" stylesheets="@../Css/menu-style.css" text="Прізвище + Ім'я" />
+            <JFXButton fx:id="theoryScheduleSliderButton" onAction="#handleTheorySchedule" prefHeight="35.0" prefWidth="250.0" styleClass="sidebarItem" stylesheets="@../Css/menu-style.css" text="Теоретичні заняття">
+            <VBox.margin>
+               <Insets top="30.0" />
+            </VBox.margin></JFXButton>
+         <JFXButton fx:id="practiceSliderButton" onAction="#handlePractice" prefHeight="35.0" prefWidth="250.0" styleClass="sidebarItem" stylesheets="@../Css/menu-style.css" text="Розклад з практики" />
+         <JFXButton fx:id="testsSliderButton" onAction="#handleTests" prefHeight="35.0" prefWidth="250.0" styleClass="sidebarItem" stylesheets="@../Css/menu-style.css" text="Тести з ПДР" />
+            <JFXButton fx:id="settingsSliderButton" onAction="#handleSettings" prefHeight="35.0" prefWidth="250.0" styleClass="sidebarItem" stylesheets="@../Css/menu-style.css" text="Налаштування">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin></JFXButton>
+            <JFXButton fx:id="exitSliderButton" onAction="#handleExit" prefHeight="35.0" prefWidth="250.0" styleClass="sidebarItemExit" stylesheets="@../Css/menu-style.css" text="Вийти">
+            <VBox.margin>
+               <Insets top="250.0" />
+            </VBox.margin></JFXButton>
+        </VBox>
+    </Pane>
+</AnchorPane>

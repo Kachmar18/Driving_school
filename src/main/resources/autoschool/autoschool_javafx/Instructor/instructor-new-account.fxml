@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1400.0" styleClass="root" stylesheets="@../Css/enter-system-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoschool.autoschool_javafx.Instructor.InstructorNewAccount">
+   <JFXButton fx:id="createNewAccount" layoutX="380.0" layoutY="540.0" minHeight="39.0" minWidth="300.0" onAction="#createNewInstructorAccount" prefHeight="45.0" prefWidth="600.0" text="Створити акаунт" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="70.0" />
+   <JFXButton fx:id="returnButton" layoutX="14.0" layoutY="555.0" onAction="#returnButton" prefWidth="235.0" styleClass="jfx-exit-button" text="Повернутись назад" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0">
+      <graphic>
+         <ImageView fitHeight="26.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/Return_icon.png" />
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <TextField fx:id="lastNameTextField" layoutX="375.0" layoutY="144.0" prefHeight="35.0" prefWidth="300.0" promptText="Прізвище" styleClass="text-field" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="140.0" />
+   <TextField fx:id="firstNameTextField" layoutX="490.0" layoutY="144.0" prefHeight="35.0" prefWidth="300.0" promptText="Ім'я" styleClass="text-field" AnchorPane.leftAnchor="712.0" AnchorPane.topAnchor="140.0" />
+   <TextField fx:id="secondNameTextField" layoutX="1223.0" layoutY="144.0" prefHeight="35.0" prefWidth="300.0" promptText="По-батькові" styleClass="text-field" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="140.0" />
+   <DatePicker fx:id="datePicker" layoutX="375.0" layoutY="195.0" onAction="#datePicker" prefHeight="35.0" promptText="Оберіть дату" AnchorPane.leftAnchor="375.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="205.0" />
+   <TextField fx:id="phoneTextField" layoutX="375.0" layoutY="264.0" prefHeight="35.0" prefWidth="400.0" styleClass="text-field" AnchorPane.leftAnchor="375.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="270.0" />
+   <TextField fx:id="emailTextField" layoutX="375.0" layoutY="335.0" prefHeight="35.0" prefWidth="400.0" promptText="example@your.email" styleClass="text-field" AnchorPane.leftAnchor="375.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="335.0" />
+   <RadioButton fx:id="SexFemaleRadioButton" layoutX="519.0" layoutY="404.0" mnemonicParsing="false" text="Жінка" AnchorPane.leftAnchor="519.0" AnchorPane.topAnchor="400.0">
+      <toggleGroup>
+         <ToggleGroup fx:id="sexRadioButtons" />
+      </toggleGroup></RadioButton>
+   <RadioButton fx:id="SexMaleRadioButton" layoutX="808.0" layoutY="404.0" maxWidth="200.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="126.0" text="Чоловік" toggleGroup="$sexRadioButtons" AnchorPane.rightAnchor="465.6" AnchorPane.topAnchor="400.0">
+
+   </RadioButton>
+   <ComboBox fx:id="categoryComboBox" layoutX="375.0" layoutY="475.0" minHeight="41.0" onMouseClicked="#categoryComboBox" prefHeight="35.0" prefWidth="394.0" promptText="Оберіть категорію водіння" styleClass="text-field" AnchorPane.leftAnchor="375.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="465.0" />
+   <PasswordField fx:id="passwordTextField" layoutX="375.0" layoutY="544.0" minHeight="35.0" prefHeight="35.0" prefWidth="347.0" AnchorPane.leftAnchor="375.0" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="530.0" />
+   <ToggleButton fx:id="showPasswordButton" layoutX="701.6" layoutY="414.2" maxHeight="35.0" minHeight="35.0" onAction="#showPasswordButton" prefHeight="35.0" prefWidth="29.0" style="-fx-background-color: #F5F5F5;" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="530.0">
+      <graphic>
+         <ImageView fx:id="passwordIcon" disable="true" fitHeight="31.2" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/hide_icon.png" />
+         </ImageView>
+      </graphic>
+   </ToggleButton>
+   <PasswordField fx:id="specialPasswordTextField" layoutX="375.0" layoutY="615.0" minHeight="35.0" prefHeight="35.0" prefWidth="346.0" AnchorPane.leftAnchor="375.0" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="595.0" />
+   <ToggleButton fx:id="showSpecialPasswordButton" layoutX="701.6" layoutY="467.0" maxHeight="35.0" minHeight="35.0" onAction="#showSpecialPasswordButton" prefHeight="35.0" prefWidth="29.0" style="-fx-background-color: #F5F5F5;" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="595.0">
+      <graphic>
+         <ImageView fx:id="specialPasswordIcon" disable="true" fitHeight="31.2" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/hide_icon.png" />
+         </ImageView>
+      </graphic>
+   </ToggleButton>
+   <Label fx:id="roleLabel" layoutX="647.0" layoutY="27.0" styleClass="label-for-role" text="Студент" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="58.0" />
+   <Label fx:id="newAccountTitleLabel" layoutX="16.0" layoutY="21.0" prefHeight="31.0" prefWidth="638.0" styleClass="label-for-logo" text="Створення нового акаунту" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="42.0" />
+   <ImageView fx:id="roleIcon" fitHeight="55.0" fitWidth="60.0" layoutX="740.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="42.0">
+      <Image url="@../Icons/Student_icon.png" />
+   </ImageView>
+   <Label fx:id="namingLabel" layoutX="43.0" layoutY="143.0" prefHeight="35.0" styleClass="label-for-normal" text="Введіть ПІП" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="140.0" />
+   <Label fx:id="dateBirthLabel" layoutX="50.0" layoutY="195.0" prefHeight="35.0" styleClass="label-for-normal" text="Дата народження" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="205.0" />
+   <Label fx:id="phoneLabel" layoutX="50.0" layoutY="264.0" prefHeight="35.0" styleClass="label-for-normal" text="Номер телефону" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="270.0" />
+   <Label fx:id="emailLabel" layoutX="50.0" layoutY="335.0" prefHeight="35.0" styleClass="label-for-normal" text="Електронна пошта" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="335.0" />
+   <Label fx:id="newPasswordLabel" layoutX="50.0" layoutY="544.0" minHeight="35.0" prefHeight="35.0" styleClass="label-for-normal" text="Пароль для подальшого входу" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="530.0" />
+   <Label fx:id="sexLabel" layoutX="50.0" layoutY="404.0" prefHeight="35.0" styleClass="label-for-normal" text="Оберіть стать" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="400.0" />
+   <Label fx:id="categoryLabel" layoutX="50.0" layoutY="475.0" minHeight="41.0" prefHeight="35.0" styleClass="label-for-normal" text="Категорія" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="465.0" />
+   <Label fx:id="specialPasswordLabel" layoutX="50.0" layoutY="615.0" minHeight="35.0" prefHeight="35.0" styleClass="label-for-normal" text="Пароль-запрошення" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="595.0" />
+   <Label fx:id="errorTipLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="846.0" layoutY="649.0" prefHeight="20.0" prefWidth="511.0" styleClass="error-label" text="* Заповніть усі поля, виділені червоним" textFill="#ff2020" visible="false">
+      <font>
+         <Font name="Arial Bold Italic" size="16.0" />
+      </font>
+   </Label>
+</AnchorPane>

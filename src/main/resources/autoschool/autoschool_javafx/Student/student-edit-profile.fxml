@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="680.0" prefWidth="1400.0" style="-fx-background-color: #9FBDCC;" stylesheets="@../Css/additional-window-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoschool.autoschool_javafx.Student.StudentEditProfile">
+   <JFXButton fx:id="editAccount" layoutX="834.0" layoutY="620.0" minHeight="40.0" minWidth="500.0" onAction="#editAccount" prefWidth="500.0" styleClass="my-button" text="Зберегти зміни">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/save_icon.png" />
+         </ImageView>
+      </graphic></JFXButton>
+   <JFXButton fx:id="returnButton" alignment="BASELINE_LEFT" layoutX="30.0" layoutY="620.0" minWidth="250.0" onAction="#returnButton" styleClass="jfx-button-return" text="Повернутись назад">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../Icons/Return_icon.png" />
+            </image>
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <TextField fx:id="lastNameTextField" layoutX="400.0" layoutY="120.0" minWidth="296.0" prefHeight="35.0" prefWidth="125.0" promptText="Прізвище" styleClass="text-field" stylesheets="@../Css/Style_test.css" />
+   <TextField fx:id="firstNameTextField" layoutX="715.0" layoutY="120.0" minWidth="296.0" prefHeight="35.0" prefWidth="125.0" promptText="Ім'я" styleClass="text-field" stylesheets="@../Css/Style_test.css" />
+   <TextField fx:id="secondNameTextField" layoutX="1034.0" layoutY="120.0" minWidth="296.0" prefHeight="35.0" prefWidth="125.0" promptText="По-батькові" styleClass="text-field" stylesheets="@../Css/Style_test.css" />
+   <DatePicker fx:id="datePicker" layoutX="400.0" layoutY="180.0" onAction="#datePicker" prefHeight="35.0" prefWidth="930.0" promptText="Оберіть дату" stylesheets="@../Css/Style_test.css" />
+   <TextField fx:id="phoneTextField" layoutX="400.0" layoutY="240.0" prefHeight="35.0" prefWidth="930.0" styleClass="text-field" text="+380" />
+   <TextField fx:id="emailTextField" layoutX="400.0" layoutY="300.0" prefHeight="35.0" prefWidth="930.0" promptText="example@your.email" stylesheets="@../Css/Style_test.css" />
+   <RadioButton fx:id="SexFemaleRadioButton" layoutX="545.0" layoutY="360.0" mnemonicParsing="false" text="Жінка">
+      <toggleGroup>
+         <ToggleGroup fx:id="sexRadioButtons" />
+      </toggleGroup>
+   </RadioButton>
+   <RadioButton fx:id="SexMaleRadioButton" layoutX="920.0" layoutY="360.0" maxWidth="200.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="126.0" text="Чоловік" toggleGroup="$sexRadioButtons" />
+   <ComboBox fx:id="categoryComboBox" layoutX="400.0" layoutY="410.0" onMouseClicked="#categoryComboBox" prefHeight="35.0" prefWidth="930.0" promptText="Оберіть бажану категорію" styleClass="text-field" />
+   <PasswordField fx:id="passwordTextField" layoutX="400.0" layoutY="480.0" minHeight="35.0" prefHeight="35.0" prefWidth="875.0" />
+   <ToggleButton fx:id="showPasswordButton" layoutX="1282.0" layoutY="480.0" maxHeight="35.0" minHeight="35.0" onAction="#showPasswordButton" prefHeight="35.0" prefWidth="29.0" style="-fx-background-color: #9FBDCC;">
+      <graphic>
+         <ImageView fx:id="passwordIcon" disable="true" fitHeight="31.2" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/hide_icon.png" />
+         </ImageView>
+      </graphic>
+   </ToggleButton>
+   <Label fx:id="namingLabel" layoutX="70.0" layoutY="120.0" styleClass="label-form" text="Введіть ПІП" />
+   <Label fx:id="dateBirthLabel" layoutX="70.0" layoutY="180.0" styleClass="label-form" text="Дата народження" />
+   <Label fx:id="phoneLabel" layoutX="70.0" layoutY="240.0" styleClass="label-form" text="Номер телефону" />
+   <Label fx:id="emailLabel" layoutX="70.0" layoutY="300.0" styleClass="label-form" text="Електронна пошта" />
+   <Label fx:id="sexLabel" layoutX="70.0" layoutY="420.0" styleClass="label-form" text="Оберіть стать" />
+   <Label fx:id="newPasswordLabel" layoutX="70.0" layoutY="480.0" minHeight="35.0" styleClass="label-form" text="Пароль для подальшого входу" />
+   <Label fx:id="categoryLabel" layoutX="70.0" layoutY="360.0" styleClass="label-form" text="Категорія" />
+   <Label fx:id="errorTipLabel" alignment="CENTER_RIGHT" layoutX="824.0" layoutY="555.0" prefWidth="500.0" styleClass="error-label" text="* Заповніть усі поля, виділені червоним" textFill="#ff2020" visible="false">
+      <font>
+         <Font name="Arial Bold Italic" size="16.0" />
+      </font>
+   </Label>
+   <Text fx:id="editAccountTitleText" fill="#01141d" layoutX="50.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-for-header" text="Редагування даних акаунту" />
+</Pane>

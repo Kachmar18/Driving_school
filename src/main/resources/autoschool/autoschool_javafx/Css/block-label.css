@@ -1,0 +1,37 @@
+.label {
+    -fx-font-size: 22px; /* розмір шрифту */
+    -fx-text-fill: #333333; /* колір тексту */
+
+    -fx-pref-width: 1300px; /* Задайте бажаний розмір кнопок */
+    -fx-pref-height: 55px;
+    -fx-background-color: #fadbd8; /* фон */
+
+    -fx-background-radius: 5px; /* заокруглені рамки */
+    -fx-border-color: rgba(0, 91, 153, 0.7); /* колір рамок */
+    -fx-border-width: 1px; /* товщина рамок */
+    -fx-border-radius: 5px; /* заокруглені рамки */
+
+    -fx-padding: 5px; /* відступ всередині елементу */
+
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 1);
+}
+
+.label-header {
+    -fx-font-size: 25px; /* розмір шрифту */
+    -fx-text-fill: #333333; /* колір тексту */
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-font-weight: bold;
+
+    -fx-pref-width: 1300px; /* Задайте бажаний розмір кнопок */
+    -fx-pref-height: 55px;
+    -fx-background-color: #fadbd8; /* фон */
+
+    -fx-background-radius: 5px; /* заокруглені рамки */
+    -fx-border-color: #01141d; /* колір рамок */
+    -fx-border-width: 1px; /* товщина рамок */
+    -fx-border-radius: 5px; /* заокруглені рамки */
+
+    -fx-padding: 5px 5px 5px 150px;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 5, 5);
+}

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1400.0" style="-fx-background-color: #d4eaf7;" stylesheets="@../Css/additional-window-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoschool.autoschool_javafx.TestsPDR.TrainingRideTestWindow">
+   <Label fx:id="trainingRideTestLabel" layoutX="50.0" layoutY="16.0" prefHeight="53.0" prefWidth="539.0" styleClass="label-for-test" text="Тест ПДР: Навчальна їзда" />
+   <JFXButton fx:id="doneTestButton" layoutX="834.0" layoutY="620.0" minHeight="40.0" minWidth="500.0" onAction="#doneTestButton" prefWidth="500.0" styleClass="jfx-button" text="Завершити тестування">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/save_icon.png" />
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <JFXButton fx:id="returnButton" alignment="BASELINE_LEFT" layoutX="30.0" layoutY="620.0" minWidth="250.0" onAction="#returnButton" styleClass="jfx-button-return" text="Повернутись назад">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/Return_icon.png" />
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <Label fx:id="errorTipLabel" alignment="CENTER_RIGHT" layoutX="834.0" layoutY="585.0" prefWidth="500.0" styleClass="error-label" text="* Заповніть усі поля, виділені червоним" textFill="#ff2020" visible="false">
+      <font>
+         <Font name="Arial Bold Italic" size="16.0" />
+      </font>
+   </Label>
+   <ScrollPane layoutX="30.0" layoutY="83.0" prefHeight="500.0" prefWidth="1344.0" style="-fx-background-color: #d4eaf7;">
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3250.0" prefWidth="1328.0" style="-fx-background-color: #d4eaf7;">
+         <Pane layoutX="-15.0" layoutY="-2.0" prefHeight="632.0" prefWidth="1336.0" style="-fx-background-color: #d4eaf7;" stylesheets="@../Css/additional-window-style.css">
+            <Label layoutX="14.0" layoutY="-5.0" styleClass="label-number" text="№1" textFill="#b2d609" />
+            <Label fx:id="questionLabelTR_1" layoutX="90.0" layoutY="2.0" styleClass="label-question" text="Чи дозволено навчання водінню транспортного засобу на дорогах, позначених такими дорожніми знаками?" />
+            <ImageView fitHeight="174.0" fitWidth="261.0" layoutX="90.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../Icons/Icons_Training_Ride_Test/task_1.jpg" />
+            </ImageView>
+            <JFXRadioButton fx:id="task1_allowRB" layoutX="709.0" layoutY="96.0" text="Дозволено" textFill="#01141d">
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_1" />
+               </toggleGroup>
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task1_banRB" layoutX="709.0" layoutY="151.0" text="Заборонено" textFill="#01141d" toggleGroup="$task_1">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="14.0" layoutY="239.0" styleClass="label-number" text="№2" textFill="#b2d609" />
+            <Label fx:id="questionLabelTR_2" layoutX="90.0" layoutY="246.0" styleClass="label-question" text="Чи дозволена навчальна їзда в житлових зонах?" />
+            <ImageView fitHeight="174.0" fitWidth="261.0" layoutX="90.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../Icons/Icons_Training_Ride_Test/task_2.jpg" />
+            </ImageView>
+            <JFXRadioButton fx:id="task2_allowRB" layoutX="709.0" layoutY="328.0" text="Дозволено" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_2" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task2_banRB" layoutX="709.0" layoutY="379.0" text="Заборонено" textFill="#01141d" toggleGroup="$task_2">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task2_3RB" layoutX="709.0" layoutY="427.0" text="Дозволено під час руху за навчальним маршрутом" textFill="#01141d" toggleGroup="$task_2">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="14.0" layoutY="488.0" styleClass="label-number" text="№3" textFill="#b2d609" />
+            <Label fx:id="questionLabelTR_3" layoutX="90.0" layoutY="495.0" styleClass="label-question" text="Чи дозволена навчальна їзда в житлових зонах?" />
+            <ImageView fitHeight="174.0" fitWidth="463.0" layoutX="90.0" layoutY="568.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../Icons/Icons_Training_Ride_Test/task_3.jpg" />
+            </ImageView>
+            <JFXRadioButton fx:id="task3_1RB" layoutX="709.0" layoutY="577.0" text="Знаками 3, 4 і 5" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_3" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task3_2RB" layoutX="709.0" layoutY="628.0" text="Знаками 4 і 5" textFill="#01141d" toggleGroup="$task_3">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task3_3RB" layoutX="709.0" layoutY="676.0" text="Знаками 1, 2, 4 і 5" textFill="#01141d" toggleGroup="$task_3">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task3_4RB" layoutX="709.0" layoutY="728.0" text="Всіма зазначеними знаками" textFill="#01141d" toggleGroup="$task_3">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="14.0" layoutY="771.0" styleClass="label-number" text="№4" textFill="#b2d609" />
+            <Label fx:id="questionLabelTR_4" layoutX="90.0" layoutY="778.0" styleClass="label-question" text="Яким із дорожніх знаків позначається дорога, на якій заборонена навчальна їзда?" />
+            <ImageView fitHeight="174.0" fitWidth="463.0" layoutX="90.0" layoutY="851.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../Icons/Icons_Training_Ride_Test/task_3.jpg" />
+            </ImageView>
+            <JFXRadioButton fx:id="task4_1RB" layoutX="709.0" layoutY="860.0" text="Всіма" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_4" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task4_2RB" layoutX="709.0" layoutY="907.0" text="Знаками 1, 2, 3 і 5" textFill="#01141d" toggleGroup="$task_4">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task4_3RB" layoutX="709.0" layoutY="954.0" text="Знаками 1, 2 і 3" textFill="#01141d" toggleGroup="$task_4">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task4_4RB" layoutX="709.0" layoutY="1000.0" text="Знаками 1, 2, 3 і 4" textFill="#01141d" toggleGroup="$task_4">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task4_5RB" layoutX="709.0" layoutY="1043.0" text="Знаками 1, 2 і 5" textFill="#01141d" toggleGroup="$task_4">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="14.0" layoutY="1079.0" styleClass="label-number" text="№5" textFill="#b2d609" />
+            <Label fx:id="questionLabelTR_5" layoutX="90.0" layoutY="1086.0" styleClass="label-question" text="Обов’язковою умовою, за якої дозволено навчатися водінню транспортного засобу, є:" />
+            <JFXRadioButton fx:id="task5_1RB" layoutX="90.0" layoutY="1144.0" text="Наявність мінімальних навичок водіння" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_5" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task5_2RB" layoutX="90.0" layoutY="1191.0" text="Досягнення 18-річного віку" textFill="#01141d" toggleGroup="$task_5">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task5_3RB" layoutX="90.0" layoutY="1238.0" text="Відсутність медичних протипоказань, що підтверджується дійсною медичною довідкою становленого зразку" textFill="#01141d" toggleGroup="$task_5">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task5_4RB" layoutX="90.0" layoutY="1284.0" text="Відповіді 1, 2 і 3" textFill="#01141d" toggleGroup="$task_5">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="14.0" layoutY="1327.0" styleClass="label-number" text="№6" textFill="#b2d609" />
+            <Label fx:id="questionLabelTR_6" layoutX="90.0" layoutY="1334.0" styleClass="label-question" text="Початкове навчання водінню транспортного засобу повинно проводитися:" />
+            <JFXRadioButton fx:id="task6_1RB" layoutX="90.0" layoutY="1392.0" text="На закритих майданчиках, автодромах або у місцях, де відсутні інші учасники дорожнього руху" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_6" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task6_2RB" layoutX="90.0" layoutY="1439.0" text="Одразу на вулицях населеного пункту, де є інші учасники дорожнього руху, а в кінці на автодромі" textFill="#01141d" toggleGroup="$task_6">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task6_3RB" layoutX="90.0" layoutY="1486.0" text="На складних перехрестях і дорогах з одностороннім рухом.На складних перехрестях і дорогах з одностороннім рухом" textFill="#01141d" toggleGroup="$task_6">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="16.0" layoutY="1530.0" styleClass="label-number" text="№7" textFill="#b2d609" />
+            <Label fx:id="questionLabelTR_7" layoutX="92.0" layoutY="1533.0" prefHeight="73.0" prefWidth="1222.0" styleClass="label-question" text="Чим із переліченого мають бути обладнані автомобілі з механічною коробкою передач, що систематично використовуються для навчання водіння?" wrapText="true" />
+            <JFXRadioButton fx:id="task7_1RB" layoutX="90.0" layoutY="1611.0" prefHeight="56.0" prefWidth="1222.0" text="Додатковими педалями зчеплення і гальма, а також педаллю акселератора (якщо конструкція транспортного засобу допускає можливість обладнання такою педаллю)" textFill="#01141d" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_7" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task7_2RB" layoutX="90.0" layoutY="1676.0" prefWidth="1222.0" text="Дзеркалом або дзеркалами заднього виду для спеціаліста з підготовки водіїв, а також розпізнавальними знаками «Навчальний транспортний засіб», встановленими відповідно до вимог Правил дорожнього руху" textFill="#01141d" toggleGroup="$task_7" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task7_3RB" layoutX="90.0" layoutY="1729.0" text="Правильні відповіді 1 і 2" textFill="#01141d" toggleGroup="$task_7">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="19.0" layoutY="1774.0" styleClass="label-number" text="№8" textFill="#b2d609" />
+            <Label fx:id="questionLabelTR_8" layoutX="95.0" layoutY="1773.0" prefHeight="56.0" prefWidth="1222.0" styleClass="label-question" text="Автомобілі, що систематично використовуються для навчання водіння, мають бути обладнані:" wrapText="true" />
+            <JFXRadioButton fx:id="task8_1RB" layoutX="93.0" layoutY="1818.0" prefHeight="40.0" prefWidth="1222.0" text="Розпізнавальними знаками «Навчальний транспортний засіб», встановленими відповідно до вимог Правил дорожнього руху" textFill="#01141d" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_8" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task8_2RB" layoutX="93.0" layoutY="1860.0" prefWidth="1222.0" text="Додатковими педалями зчеплення (якщо конструкція транспортного засобу передбачає педаль зчеплення), акселератора (якщо конструкція транспортного засобу допускає можливість обладнання такою педаллю) і гальмування" textFill="#01141d" toggleGroup="$task_8" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task8_3RB" layoutX="93.0" layoutY="1917.0" text="Дзеркалом або дзеркалами заднього виду для спеціаліста з підготовки водіїв" textFill="#01141d" toggleGroup="$task_8">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task8_4RB" layoutX="93.0" layoutY="1960.0" text="Правильні відповіді 1 і 2" textFill="#01141d" toggleGroup="$task_8">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task8_5RB" layoutX="93.0" layoutY="2004.0" text="Правильні відповіді 1, 2 і 3" textFill="#01141d" toggleGroup="$task_8">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="19.0" layoutY="2042.0" styleClass="label-number" text="№9" textFill="#b2d609" />
+            <Label fx:id="questionLabelTR_9" layoutX="95.0" layoutY="2049.0" styleClass="label-question" text="Чи дозволена навчальна їзда на дорогах без присутності спеціаліста з підготовки водіїв?" />
+            <JFXRadioButton fx:id="task9_1RB" layoutX="95.0" layoutY="2099.0" text="Заборонена" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_9" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task9_2RB" layoutX="95.0" layoutY="2146.0" text="Дозволена за умови присутності водія зі стажем не менше трьох років" textFill="#01141d" toggleGroup="$task_9">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task9_3RB" layoutX="95.0" layoutY="2193.0" text="Дозволена в присутності будь-якого досвідченого водія" textFill="#01141d" toggleGroup="$task_9">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="19.0" layoutY="2237.0" styleClass="label-number" text="№10" textFill="#b2d609" />
+            <Label fx:id="questionLabelTR_10" layoutX="95.0" layoutY="2244.0" styleClass="label-question" text="Де має проводитися початкове навчання водінню транспортного засобу?" />
+            <JFXRadioButton fx:id="task10_1RB" layoutX="95.0" layoutY="2295.0" text="Тільки в місцях, де відсутні інші учасники дорожнього руху" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_10" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task10_2RB" layoutX="95.0" layoutY="2342.0" text="Тільки на закритих майданчиках і автодромах" textFill="#01141d" toggleGroup="$task_10">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task10_3RB" layoutX="95.0" layoutY="2386.0" text="На дорогах з неінтенсивним рухом" textFill="#01141d" toggleGroup="$task_10">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task10_4RB" layoutX="95.0" layoutY="2428.0" text="На закритих майданчиках, автодромах або у місцях, де немає інших учасників дорожнього руху" textFill="#01141d" toggleGroup="$task_10">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="20.0" layoutY="2459.0" styleClass="label-number" text="№11" textFill="#b2d609" />
+            <Label fx:id="questionLabelTR_11" layoutX="96.0" layoutY="2466.0" styleClass="label-question" text="Чи повинна особа, яка навчається водінню транспортного засобу, знати і виконувати вимоги Правил дорожнього руху?" />
+            <JFXRadioButton fx:id="task11_1RB" layoutX="96.0" layoutY="2517.0" text="Не повинна" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_11" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task11_2RB" layoutX="96.0" layoutY="2564.0" text="Повинна обов'язково" textFill="#01141d" toggleGroup="$task_11">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="20.0" layoutY="2603.0" styleClass="label-number" text="№12" textFill="#b2d609" />
+            <Label fx:id="questionLabelTR_12" layoutX="96.0" layoutY="2610.0" styleClass="label-question" text="З якого віку дозволено навчатися водінню автомобіля?" />
+            <JFXRadioButton fx:id="task12_1RB" layoutX="96.0" layoutY="2657.0" text="З 14 років" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_12" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task12_2RB" layoutX="96.0" layoutY="2699.0" text="З 16 років" textFill="#01141d" toggleGroup="$task_12">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task12_3RB" layoutX="96.0" layoutY="2737.0" text="З 17 років" textFill="#01141d" toggleGroup="$task_12">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task12_5RB" layoutX="96.0" layoutY="2807.0" text="З 19 років" textFill="#01141d" toggleGroup="$task_12">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task12_4RB" layoutX="96.0" layoutY="2774.0" text="З 18 років" textFill="#01141d" toggleGroup="$task_12">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="22.0" layoutY="2838.0" styleClass="label-number" text="№13" textFill="#b2d609" />
+            <Label fx:id="questionLabelTR_13" layoutX="98.0" layoutY="2845.0" styleClass="label-question" text="Особа, яка навчається водінню транспортного засобу:" />
+            <JFXRadioButton fx:id="task13_1RB" layoutX="98.0" layoutY="2892.0" text="Зобов’язана знати й виконувати вимоги Правил дорожнього руху" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_13" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task13_2RB" layoutX="98.0" layoutY="2934.0" text="Може розпочати навчання водіння до вивчення правил проїзду перехресть" textFill="#01141d" toggleGroup="$task_13">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task13_3RB" layoutX="98.0" layoutY="2972.0" text="Не зобов’язана знати вимоги Правил дорожнього руху" textFill="#01141d" toggleGroup="$task_13">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="22.0" layoutY="3010.0" styleClass="label-number" text="№14" textFill="#b2d609" />
+            <Label fx:id="questionLabelTR_14" layoutX="98.0" layoutY="3017.0" styleClass="label-question" text="Чи дозволено особам, які навчаються водінню, не пристібатись під час руху в населеному пункті?" />
+            <ImageView fitHeight="174.0" fitWidth="261.0" layoutX="98.0" layoutY="3065.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../Icons/Icons_Training_Ride_Test/task_14.jpg" />
+            </ImageView>
+            <JFXRadioButton fx:id="task14_allowRB" layoutX="717.0" layoutY="3111.0" text="Дозволено" textFill="#01141d">
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_14" />
+               </toggleGroup>
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="task14_banRB" layoutX="717.0" layoutY="3166.0" text="Заборонено" textFill="#01141d" toggleGroup="$task_14">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+         </Pane>
+      </AnchorPane>
+   </ScrollPane>
+</Pane>

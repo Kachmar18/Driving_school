@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="680.0" prefWidth="1400.0" style="-fx-background-color: #9FBDCC;" stylesheets="@../Css/additional-window-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoschool.autoschool_javafx.Instructor.InstructorNewPractice">
+
+   <JFXButton fx:id="createPracticeButton" layoutX="834.0" layoutY="620.0" minHeight="39.0" minWidth="500.0" onAction="#createPracticeButton" prefWidth="500.0" styleClass="my-button" text="Зберегти зміни">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/save_icon.png" />
+         </ImageView>
+      </graphic></JFXButton>
+   <JFXButton fx:id="returnButton" alignment="BASELINE_LEFT" layoutX="30.0" layoutY="620.0" minWidth="250.0" onAction="#returnButton" prefWidth="250.0" styleClass="jfx-button-return" text="Повернутись назад">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/Return_icon.png" />
+         </ImageView>
+      </graphic>
+      <padding>
+         <Insets left="10.0" />
+      </padding>
+   </JFXButton>
+   <Label fx:id="chooseStudentLabel" layoutX="70.0" layoutY="330.0" styleClass="label-form" text="Студент" />
+   <Label fx:id="dateTimeLabel" layoutX="70.0" layoutY="120.0" styleClass="label-form" text="Дата та час " />
+   <Text fx:id="createNewPracticeTitleText" fill="#01141d" layoutX="50.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-for-header" text="Створення нового заняття" />
+   <DatePicker fx:id="datePicker" layoutX="350.0" layoutY="120.0" onAction="#datePicker" prefHeight="35.0" prefWidth="480.0" promptText="Оберіть дату" stylesheets="@../Css/Style_test.css" />
+   <TextField fx:id="timePickerTextField" layoutX="875.0" layoutY="120.0" prefHeight="35.0" prefWidth="455.0" promptText="Введіть час" styleClass="text-field" stylesheets="@../Css/Style_test.css" />
+   <TextField fx:id="routeTextField" layoutX="350.0" layoutY="190.0" prefHeight="35.0" prefWidth="980.0" promptText="Введіть маршрут" styleClass="text-field" />
+   <Label fx:id="routeLabel" layoutX="70.0" layoutY="190.0" styleClass="label-form" text="Маршрут" />
+   <ComboBox fx:id="durationComboBox" layoutX="350.0" layoutY="260.0" prefHeight="35.0" prefWidth="980.0" promptText="Оберіть тривалість заняття" styleClass="text-field" />
+   <Label fx:id="durationLabel" layoutX="70.0" layoutY="260.0" styleClass="label-form" text="Тривалість, год" />
+   <ComboBox fx:id="studentComboBox" layoutX="350.0" layoutY="330.0" prefHeight="35.0" prefWidth="980.0" promptText="Оберіть студента" styleClass="text-field" />
+   <Label fx:id="statusLabel" layoutX="70.0" layoutY="400.0" styleClass="label-form" text="Статус" visible="false" />
+   <ComboBox fx:id="statusComboBox" layoutX="350.0" layoutY="400.0" prefHeight="35.0" prefWidth="980.0" promptText="Оберіть статутс заняття" styleClass="text-field" visible="false" />
+   <Label fx:id="errorTipLabel" alignment="CENTER_RIGHT" layoutX="834.0" layoutY="561.0" prefHeight="21.0" prefWidth="500.0" styleClass="error-label" text="* Заповніть усі поля, виділені червоним" textFill="#ff2020" visible="false">
+      <font>
+         <Font name="Arial Bold Italic" size="16.0" />
+      </font>
+   </Label>
+</Pane>

@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'Mariupol-Regular';
+    src: url('Mariupol-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Lena';
+    src: url('Lena.ttf');
+}
+
+.root {                                                                                           /* Стиль фону вікна */
+    -fx-background-color: #9fbdcc;
+}
+
+
+.label-for-logo {                                                                            /* Стиль тексту заголовку*/
+    -fx-font-size: 45px;
+    -fx-font-family: 'Lena';
+    -fx-text-fill: #005B99;
+    -fx-font-weight: bold;
+}
+
+.label-for-normal {                                                                            /* Стиль тексту з фоном*/
+   -fx-font-size: 20px;
+   -fx-font-family: 'Mariupol-Regular';
+   -fx-text-fill: #5c5c5c;
+   -fx-padding: 5;
+   -fx-background-color: #ebebeb;
+   -fx-background-radius: 6;
+   -fx-border-radius: 6;
+   -fx-effect: innershadow(gaussian, #c2c2c2, 10, 0, 0, 0);
+}
+
+.label-for-test{                                                                            /* Стиль тексту заголовку*/ //треба
+    -fx-font-size: 45px;
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-text-fill: #005B99;
+   -fx-padding: 5;
+}
+
+.label-form {                                                                                   /* Стиль звичайного тексту */ //треба
+   -fx-font-size: 20px;
+   -fx-font-family: 'Mariupol-Regular';
+   -fx-text-fill: #01141D;
+   -fx-padding: 5;
+}
+
+.label-number {                                                                                   /* Стиль звичайного тексту */ //треба
+   -fx-font-size: 30px;
+   -fx-font-family: 'Mariupol-Regular';
+   -fx-text-fill: #005B99;
+   -fx-padding: 5;
+   -fx-font-weight: bold;
+}
+
+.label-question {                                                                                   /* Стиль звичайного тексту */ //треба
+   -fx-font-size: 20px;
+   -fx-font-family: 'Mariupol-Regular';
+   -fx-text-fill: #01141D;
+   -fx-padding: 5;
+   -fx-font-weight: bold;
+}
+
+.label-for-header{                                                                            /* Стиль тексту заголовку*/ //треба
+    -fx-font-size: 45px;
+    -fx-font-family: 'Lena';
+    -fx-text-fill: #005B99;
+    -fx-font-weight: bold;
+}
+
+.radio-button-not-selected {
+    -fx-border-color: red;
+}
+
+
+
+.my-button {                                                                                /* Стиль звичайної кнопки */ //треба
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-pref-width: 200px; /* Задайте бажаний розмір кнопок */
+    -fx-pref-height: 40px;
+    -fx-font-size: 16px; /* Задайте розмір шрифту кнопок */
+    -fx-border-color: #01141d;
+}
+
+.jfx-button {                                                                                         /* Стиль кнопок */
+    -fx-font-family: "Mariupol-Regular";
+    -fx-font-size: 20px;
+    -fx-pref-width: 200px; /* Задайте бажаний розмір кнопок */
+    -fx-pref-height: 40px;
+    -fx-background-color: #ebebeb;
+    -fx-border-color: #01141d;
+    -fx-text-fill: #333333; /* Колір тексту кнопки */
+
+    -fx-transition: all 1.0s;
+}
+
+.jfx-button:hover {
+    -fx-background-color: #005B99;
+    -fx-text-fill: #b7e9ff; /* Колір тексту кнопки при наведенні миші */
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.jfx-button-return {                                                                       /* Стиль кнопок кнопки виходу*/
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-font-size: 20px;
+    -fx-pref-width: 200px; /* Задайте бажаний розмір кнопок */
+    -fx-pref-height: 40px;
+    -fx-border-color: #01141d;
+    -fx-background-color: #ebebeb;
+    -fx-text-fill: #333333; /* Колір тексту кнопки */
+    -fx-transition: all 1.0s
+}
+
+.jfx-button-return:hover{
+    -fx-background-color: #c0392b;
+    -fx-text-fill: #ffcdc9;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+
+
+.combobox {                                                                                           /* Стиль списку */
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-font-size: 16px; /* Задайте розмір шрифту кнопок */
+    -fx-border-color: #01141d;
+    -fx-background-color: #9FBDCC;
+    -fx-text-fill: #5c5c5c;
+}
+
+.text-field {                                                                                    /* Стиль полів вводу */ //треба
+   -fx-font-size: 17px;
+   -fx-font-family: 'Mariupol-Regular';
+   -fx-text-fill: #5c5c5c;
+   -fx-padding: 5;
+   -fx-background-color: #ebebeb;
+   -fx-background-radius: 6;
+   -fx-border-radius: 6;
+   -fx-border-color: #c2c2c2;
+}
+
+.radio-button {                                                                          /* Стиль радіо кнопок */ //треба
+   -fx-font-size: 17px;
+   -fx-font-family: 'Mariupol-Regular';
+   -fx-text-fill: #5c5c5c;
+   -fx-padding: 5;
+}
+
+* {
+   -fx-darkest-grey-color: #323232;
+}
+
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: -fx-darkest-grey-color;
+    -fx-background-color: white;
+    -fx-background-image: null;
+    -fx-border-radius: 15px;
+    -fx-padding: 3px;
+}
+.radio-button .radio:selected {
+    -fx-background-color: #ebebeb;
+    -fx-background-image: null;
+}
+.radio-button -radio:armed {
+    -fx-background-color: #ebebeb;
+    -fx-background-image: null;
+}
+.radio-button -radio:determinate {
+    -fx-background-color: #ebebeb;
+    -fx-background-image: null;
+}
+.radio-button -radio:indeterminate {
+    -fx-background-color: #ebebeb;
+    -fx-background-image: null;
+}
+.radio-button .dot {
+    -fx-background-radius: 15px;
+    -fx-padding: 8px;
+}
+
+.text-field-password {                                                                       /* Стиль поля для паролю */
+    -fx-control-inner-background: #005B99;
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-font-weight: bold; /* Рядок для зроблення тексту жирним */
+}
+
+.error-label {                                                                          /* Стиль повідомлення-помилки */ //треба
+    -fx-font-size: 20px;
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-text-fill: #ff2020;
+}

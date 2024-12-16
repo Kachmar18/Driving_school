@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="680.0" prefWidth="1400.0" style="-fx-background-color: #d7bde2;" stylesheets="@../Css/menu-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoschool.autoschool_javafx.Admin.AdminCourses">
+   <TableView fx:id="coursesTableView" cache="true" centerShape="false" layoutY="150.0" minHeight="365.0" minWidth="800.0" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefHeight="530.0" prefWidth="1400.0" snapToPixel="false" styleClass="table" stylesheets="@../Css/table-course-style.css" tableMenuButtonVisible="true">
+      <columns>
+         <TableColumn fx:id="nameColumn" prefWidth="149.60000306367874" text="Назва" />
+         <TableColumn fx:id="startColumn" minWidth="3.20001220703125" prefWidth="111.99998474121094" text="Початок" />
+         <TableColumn fx:id="endColumn" minWidth="9.5999755859375" prefWidth="99.2000732421875" text="Кінець" />
+         <TableColumn fx:id="statusColumn" minWidth="9.5999755859375" prefWidth="86.4000244140625" text="Статус" />
+         <TableColumn fx:id="categoryColumn" minWidth="0.0" prefWidth="116.7999267578125" text="Категорія" />
+         <TableColumn fx:id="scheduleColumn" minWidth="0.0" prefWidth="147.199951171875" text="Графік" />
+         <TableColumn fx:id="addressColumn" minWidth="0.0" prefWidth="228.79998779296875" text="Адреса" />
+         <TableColumn fx:id="instructorColumn" prefWidth="216.0" text="Інструктор" />
+         <TableColumn fx:id="studentsColumn" prefWidth="108.79998779296875" text="Студенти" />
+         <TableColumn fx:id="operateCourseColumn" prefWidth="139.199951171875" />
+      </columns>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
+   </TableView>
+   <TextField fx:id="keyWordTextField" layoutX="20.0" layoutY="88.0" prefHeight="30.0" prefWidth="1050.0" promptText="Ключові слова" styleClass="text-field" stylesheets="@../Css/Style_test.css">
+      <padding>
+         <Insets right="50.0" />
+      </padding>
+   </TextField>
+   <JFXButton fx:id="createNewCourseButton" alignment="BASELINE_LEFT" layoutX="1119.0" layoutY="83.0" minWidth="240.0" onAction="#createNewCourseButton" prefHeight="25.0" prefWidth="240.0" styleClass="jfx-button-add" text="Новий курс">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/add_record_icon.png" />
+         </ImageView>
+      </graphic>
+      <padding>
+         <Insets left="10.0" />
+      </padding>
+   </JFXButton>
+   <Label fx:id="theoryLabel" layoutX="50.0" layoutY="16.0" styleClass="label-for-header" stylesheets="@../Css/menu-style.css" text="Теоретичні курси" textFill="#01141d" />
+</Pane>

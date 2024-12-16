@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="750.0" maxWidth="1400.0" minHeight="750.0" minWidth="1400.0" prefHeight="750.0" prefWidth="1400.0" stylesheets="@Css/enter-system-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoschool.autoschool_javafx.MainWindow">
+   <JFXButton fx:id="enterSystemButton" buttonType="RAISED" contentDisplay="CENTER" layoutX="268.0" layoutY="300.0" minHeight="45.0" minWidth="179.0" onAction="#enterSystemButton" prefHeight="45.0" prefWidth="896.0" ripplerFill="#0b69bc" styleClass="jfx-button" text="Увійти в систему" AnchorPane.leftAnchor="268.0" AnchorPane.rightAnchor="242.4000000000001" AnchorPane.topAnchor="300.0" />
+   <JFXButton fx:id="switchLanguageButton" layoutX="14.0" layoutY="552.0" onAction="#switchLanguageButton" prefHeight="38.0" prefWidth="240.0" ripplerFill="#0b68ba" styleClass="jfx-button" text="Змінити мову" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="25.0">
+      <graphic>
+         <ImageView fx:id="switchLanguageIcon" fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@Icons/UkraineFlag_icon.png" />
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <JFXButton fx:id="exitProgramButton" contentDisplay="RIGHT" layoutX="655.0" layoutY="552.0" onAction="#exitProgramButton" prefWidth="240.0" styleClass="jfx-exit-button" text="Вийти з програми" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="25.0">
+      <graphic>
+         <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@Icons/ExitProgram_icon.png" />
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <Label fx:id="roleLabel" layoutX="650.0" layoutY="58.0" styleClass="label-for-role" text="Студент" AnchorPane.rightAnchor="85.0" />
+   <ImageView fx:id="roleIcon" fitHeight="55.0" fitWidth="60.0" layoutX="723.0" layoutY="42.0" onMouseClicked="#handleRoleIconClick" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="42.0">
+      <Image url="@Icons/Student_icon.png" />
+   </ImageView>
+   <Label fx:id="mainTitleLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="128.0" lineSpacing="2.0" prefHeight="54.0" prefWidth="800.0" styleClass="label-for-logo" text="автошкола" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="128.0" />
+   <Label alignment="CENTER" contentDisplay="CENTER" layoutY="65.0" minWidth="1300.0" prefHeight="110.0" prefWidth="1300.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0">
+      <graphic>
+         <ImageView fitHeight="110.0" fitWidth="772.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@Icons/Program_icon.png" />
+         </ImageView>
+      </graphic>
+   </Label>
+</AnchorPane>

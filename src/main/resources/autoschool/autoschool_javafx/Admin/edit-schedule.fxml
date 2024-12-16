@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1400.0" style="-fx-background-color: #d7bde2;" stylesheets="@../Css/additional-window-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoschool.autoschool_javafx.Admin.AdminEditSchedule">
+   <JFXButton fx:id="createScheduleButton" layoutX="834.0" layoutY="520.0" minHeight="45.0" minWidth="500.0" onAction="#createScheduleButton" styleClass="jfx-button" text="Створити запис">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/add_record_icon.png" />
+         </ImageView>
+      </graphic></JFXButton>
+   <JFXButton fx:id="saveInfoButton" layoutX="356.0" layoutY="520.0" minHeight="45.0" minWidth="415.0" onAction="#saveInfoButton" styleClass="jfx-button" text="Зберегти зміни">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/save_icon.png" />
+         </ImageView>
+      </graphic></JFXButton>
+   <JFXButton fx:id="deleteScheduleButton" layoutX="30.0" layoutY="520.0" minHeight="45.0" minWidth="250.0" onAction="#deleteScheduleButton" styleClass="jfx-button-return" text="Видалити запис">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/delete_icon.png" />
+         </ImageView>
+      </graphic></JFXButton>
+   <ComboBox fx:id="scheduleInfoCombobox" layoutX="350.0" layoutY="120.0" minWidth="980.0" prefHeight="35.0" prefWidth="150.0" promptText="Оберіть розклад" styleClass="text-field" />
+   <TextField fx:id="startTimeTextField" layoutX="350.0" layoutY="290.0" prefHeight="35.0" prefWidth="460.0" promptText="Введіть час початку лекції" />
+   <TextField fx:id="endTimeTextField" layoutX="876.0" layoutY="290.0" prefHeight="35.0" prefWidth="460.0" promptText="Введіть час закінчення лекції" />
+   <Label fx:id="dayLabel" layoutX="70.0" layoutY="220.0" styleClass="label-form" text="День" />
+   <Label fx:id="startEndLabel" layoutX="70.0" layoutY="290.0" styleClass="label-form" text="Початок і кінець" />
+   <JFXButton fx:id="returnButton" alignment="BASELINE_LEFT" layoutX="30.0" layoutY="620.0" minWidth="250.0" onAction="#returnButton" styleClass="jfx-button-return" text="Повернутись назад">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/Return_icon.png" />
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <Text fx:id="editRecordTitleText" fill="#01141d" layoutX="60.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-for-logo" text="Редагування запису" />
+   <Label fx:id="scheduleLabel" layoutX="70.0" layoutY="120.0" styleClass="label-form" text="Розклад" />
+   <Label fx:id="errorTipLabel" alignment="CENTER_RIGHT" layoutX="834.0" layoutY="462.0" prefWidth="500.0" styleClass="error-label" text="* Заповніть усі поля, виділені червоним" textFill="#ff2020" visible="false">
+      <font>
+         <Font name="Arial Bold Italic" size="16.0" />
+      </font>
+   </Label>
+   <ComboBox fx:id="dayCombobox" layoutX="350.0" layoutY="220.0" minWidth="980.0" prefHeight="35.0" prefWidth="150.0" promptText="Оберіть день тижня" styleClass="text-field" />
+</Pane>

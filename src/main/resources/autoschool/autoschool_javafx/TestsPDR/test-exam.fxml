@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1400.0" style="-fx-background-color: #d4eaf7;" stylesheets="@../Css/additional-window-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoschool.autoschool_javafx.TestsPDR.ExamTestWindow">
+   <Label fx:id="examTestLabel" layoutX="50.0" layoutY="16.0" prefHeight="53.0" prefWidth="539.0" styleClass="label-for-test" text="Тест ПДР: Іспит" />
+   <JFXButton fx:id="doneTestButton" layoutX="834.0" layoutY="620.0" minHeight="40.0" minWidth="500.0" onAction="#doneTestButton" prefWidth="500.0" styleClass="jfx-button" text="Завершити тестування">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/save_icon.png" />
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <JFXButton fx:id="returnButton" alignment="BASELINE_LEFT" layoutX="30.0" layoutY="620.0" minWidth="250.0" onAction="#returnButton" styleClass="jfx-button-return" text="Повернутись назад">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Icons/Return_icon.png" />
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <Label fx:id="errorTipLabel" alignment="CENTER_RIGHT" layoutX="834.0" layoutY="585.0" prefWidth="500.0" styleClass="error-label" text="* Заповніть усі поля, виділені червоним" textFill="#ff2020" visible="false">
+      <font>
+         <Font name="Arial Bold Italic" size="16.0" />
+      </font>
+   </Label>
+   <ScrollPane layoutX="30.0" layoutY="83.0" prefHeight="489.0" prefWidth="1344.0" style="-fx-background-color: #d4eaf7;">
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3950.0" prefWidth="1328.0" style="-fx-background-color: #d4eaf7;">
+         <Pane layoutX="-15.0" layoutY="-2.0" prefHeight="2006.0" prefWidth="1336.0" style="-fx-background-color: #d4eaf7;" stylesheets="@../Css/additional-window-style.css">
+            <Label layoutX="14.0" layoutY="-5.0" styleClass="label-number" text="№1" textFill="#b2d609" />
+            <Label fx:id="questionLabelEM_1" layoutX="90.0" layoutY="2.0" styleClass="label-question" text="Зображений дорожній знак має таке значення:" />
+            <ImageView fitHeight="142.0" fitWidth="148.0" layoutX="90.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../Icons/Icons_Exam_Test/task_1.jpg" />
+            </ImageView>
+            <JFXRadioButton fx:id="EMRB_task1_1" layoutX="714.0" layoutY="68.0" text="Дозволяє виконати поворот ліворуч у зазначеному місці" textFill="#01141d">
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_1" />
+               </toggleGroup>
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task1_2" layoutX="714.0" layoutY="114.0" text="Дозволяє повернути тільки ліворуч" textFill="#01141d" toggleGroup="$task_1">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task1_3" layoutX="714.0" layoutY="164.0" text="Дозволяє об'їд перешкоди тільки з лівого боку" textFill="#01141d" toggleGroup="$task_1">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="14.0" layoutY="200.0" styleClass="label-number" text="№2" textFill="#b2d609" />
+            <Label fx:id="questionLabelEM_2" layoutX="90.0" layoutY="207.0" styleClass="label-question" text="Що означає вимога дати дорогу?" />
+            <JFXRadioButton fx:id="EMRB_task2_1" layoutX="90.0" layoutY="239.0" prefHeight="63.0" prefWidth="1234.0" text="Вимога до учасника дорожнього руху не продовжувати або не відновлювати рух, якщо це може примусити інших учасників дорожнього руху, які мають перевагу, змінити напрямок руху або швидкість" textFill="#01141d" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_2" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task2_2" layoutX="90.0" layoutY="294.0" prefHeight="56.0" prefWidth="1235.0" text="Вимога до учасника дорожнього руху не здійснювати будь-яких маневрів (за винятком вимоги звільнити займану смугу руху), якщо це може примусити інших учасників дорожнього руху, які мають перевагу, змінити напрямок руху або швидкість" textFill="#01141d" toggleGroup="$task_2" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task2_3" layoutX="90.0" layoutY="350.0" text="Відповідь 1 і 2" textFill="#01141d" toggleGroup="$task_2">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="12.0" layoutY="388.0" styleClass="label-number" text="№3" textFill="#b2d609" />
+            <Label fx:id="questionLabelEM_3" layoutX="88.0" layoutY="395.0" styleClass="label-question" text="У транспортному потоці найбезпечніше рухатися зі швидкістю:" />
+            <JFXRadioButton fx:id="EMRB_task3_1" layoutX="90.0" layoutY="427.0" prefHeight="63.0" prefWidth="1234.0" text="Меншою за швидкість транспортного потоку" textFill="#01141d" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_3" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task3_2" layoutX="90.0" layoutY="480.0" prefHeight="56.0" prefWidth="1235.0" text="Більшою за швидкість транспортного потоку" textFill="#01141d" toggleGroup="$task_3" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task3_3" layoutX="90.0" layoutY="538.0" text="Рівною швидкості транспортного потоку" textFill="#01141d" toggleGroup="$task_3">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="23.0" layoutY="576.0" styleClass="label-number" text="№4" textFill="#b2d609" />
+            <Label fx:id="questionLabelEM_4" layoutX="93.0" layoutY="583.0" prefHeight="70.0" prefWidth="1206.0" styleClass="label-question" text="Кожна особа, під час проходження навчання практичному водінню на легковому автомобілі (категорія В), зобов'язана отримати:" wrapText="true" />
+            <JFXRadioButton fx:id="EMRB_task4_1" layoutX="90.0" layoutY="635.0" prefHeight="63.0" prefWidth="1234.0" text="Практичне керування автомобілем на майданчику" textFill="#01141d" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_4" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task4_2" layoutX="90.0" layoutY="677.0" prefHeight="56.0" prefWidth="1235.0" text="Практичне керування автомобілем на майданчику в темну пору доби" textFill="#01141d" toggleGroup="$task_4" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task4_3" layoutX="90.0" layoutY="732.0" text="Навички руху заднім ходом за допомогою дзеркал заднього виду" textFill="#01141d" toggleGroup="$task_4">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="23.0" layoutY="975.0" styleClass="label-number" text="№6" textFill="#b2d609" />
+            <Label fx:id="questionLabelEM_6" layoutX="99.0" layoutY="982.0" styleClass="label-question" text="Зображений дорожній знак має таке значення:" />
+            <ImageView fitHeight="186.0" fitWidth="331.0" layoutX="99.0" layoutY="1030.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../Icons/Icons_Exam_Test/task_5.jpg" />
+            </ImageView>
+            <JFXRadioButton fx:id="EMRB_task6_1" layoutX="675.0" layoutY="1047.0" text="Ви в'їжджаєте на небезпечну ділянку дороги" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_6" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task6_2" layoutX="675.0" layoutY="1093.0" text="Показує місце, де потрібно зупинитися" textFill="#01141d" toggleGroup="$task_6">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task6_3" layoutX="675.0" layoutY="1132.0" prefHeight="81.0" prefWidth="621.0" text="Попереджає про наближення до дорожньої розмітки, перед якою водій повинен у разі потреби зупинитися і дати дорогу транспортним засобам, які рухаються по дорозі, що перетинається" textFill="#01141d" toggleGroup="$task_6" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="26.0" layoutY="1216.0" styleClass="label-number" text="№7" textFill="#b2d609" />
+            <Label fx:id="questionLabelEM_7" layoutX="102.0" layoutY="1224.0" styleClass="label-question" text="Посадку (висадку) пасажирам дозволено здійснювати:" />
+            <JFXRadioButton fx:id="EMRB_task7_1" layoutX="89.0" layoutY="1256.0" prefHeight="63.0" prefWidth="1234.0" text="Лише з посадкового майданчика" textFill="#01141d" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_7" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task7_2" layoutX="89.0" layoutY="1309.0" prefHeight="56.0" prefWidth="1235.0" text="За умови відсутності посадкового майданчика, з узбіччя чи тротуару, а якщо це неможливо, то з крайньої смуги" textFill="#01141d" toggleGroup="$task_7" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task7_3" layoutX="89.0" layoutY="1367.0" text="Відповідь 1 і 2" textFill="#01141d" toggleGroup="$task_7">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="32.0" layoutY="1394.0" styleClass="label-number" text="№8" textFill="#b2d609" />
+            <Label fx:id="questionLabelEM_8" layoutX="108.0" layoutY="1401.0" styleClass="label-question" text="Хто з водіїв порушив Правила дорожнього руху, виконуючи зупинку?" />
+            <ImageView fitHeight="204.0" fitWidth="313.0" layoutX="108.0" layoutY="1449.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../Icons/Icons_Exam_Test/task_8.jpg" />
+            </ImageView>
+            <JFXRadioButton fx:id="EMRB_task8_1" layoutX="684.0" layoutY="1466.0" text="Ніхто не порушує" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_8" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task8_2" layoutX="684.0" layoutY="1512.0" text="Обидва порушують" textFill="#01141d" toggleGroup="$task_8">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task8_3" layoutX="684.0" layoutY="1533.0" prefHeight="81.0" prefWidth="621.0" text="Тільки водій синього автомобіля" textFill="#01141d" toggleGroup="$task_8" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task8_4" layoutX="684.0" layoutY="1585.0" prefHeight="81.0" prefWidth="621.0" text="Тільки водій зеленого автомобіля" textFill="#01141d" toggleGroup="$task_8" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="35.0" layoutY="1653.0" styleClass="label-number" text="№9" textFill="#b2d609" />
+            <Label fx:id="questionLabelEM_9" layoutX="111.0" layoutY="1661.0" styleClass="label-question" text="За яких умов водії оперативних транспортних засобів мають перевагу в русі перед іншими учасниками дорожнього руху?" />
+            <JFXRadioButton fx:id="EMRB_task9_1" layoutX="98.0" layoutY="1693.0" prefHeight="63.0" prefWidth="1234.0" text="З увімкненим проблисковим маячком оранжевого кольору разом зі спеціальним звуковим сигналом, за умови забезпечення безпеки дорожнього руху" textFill="#01141d" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_9" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task9_2" layoutX="98.0" layoutY="1746.0" prefHeight="56.0" prefWidth="1235.0" text="За умови увімкнення проблискового маячка синього або червоного кольору та забезпечення безпеки дорожнього руху" textFill="#01141d" toggleGroup="$task_9" wrapText="true">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="32.0" layoutY="1795.0" styleClass="label-number" text="№10" textFill="#b2d609" />
+            <Label fx:id="questionLabelEM_10" layoutX="108.0" layoutY="1802.0" styleClass="label-question" text="Повертаючи ліворуч у даній ситуації, Ви повинні:" />
+            <ImageView fitHeight="204.0" fitWidth="313.0" layoutX="108.0" layoutY="1850.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../Icons/Icons_Exam_Test/task_10.jpg" />
+            </ImageView>
+            <JFXRadioButton fx:id="EMRB_task10_1" layoutX="684.0" layoutY="1878.0" text="Проїхати першим, не даючи дорогу" textFill="#01141d">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="task_10" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="EMRB_task10_2" layoutX="684.0" layoutY="1945.0" text="Дати дорогу велосипедистові" textFill="#01141d" toggleGroup="$task_10">
+               <unSelectedColor>
+                  <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+               </unSelectedColor>
+            </JFXRadioButton>
+         </Pane>
+         <JFXRadioButton fx:id="EMRB_task4_4" layoutX="75.0" layoutY="767.0" text="Відповіді 1, 2 і 3 правильні" textFill="#01141d" toggleGroup="$task_4">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <Label layoutX="14.0" layoutY="794.0" styleClass="label-number" text="№5" textFill="#b2d609" />
+         <Label fx:id="questionLabelEM_5" layoutX="90.0" layoutY="802.0" styleClass="label-question" text="Що з переліченого нижче відповідає терміну «небезпека для руху»?" />
+         <JFXRadioButton fx:id="EMRB_task5_1" layoutX="77.0" layoutY="834.0" prefHeight="63.0" prefWidth="1234.0" text="Зміна дорожньої обстановки (у тому числі поява рухомого об'єкта, який наближається до смуги руху транспортного засобу чи перетинає її)" textFill="#01141d" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+            <toggleGroup>
+               <ToggleGroup fx:id="task_5" />
+            </toggleGroup>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task5_2" layoutX="77.0" layoutY="887.0" prefHeight="56.0" prefWidth="1235.0" text="Зміна технічного стану транспортного засобу, яка загрожує безпеці дорожнього руху і змушує водія негайно зменшити швидкість або зупинитися" textFill="#01141d" toggleGroup="$task_5" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task5_3" layoutX="77.0" layoutY="945.0" text="Відповідь 1 і 2" textFill="#01141d" toggleGroup="$task_5">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <Label layoutX="14.0" layoutY="2034.0" styleClass="label-number" text="№11" textFill="#b2d609" />
+         <Label fx:id="questionLabelEM_11" layoutX="90.0" layoutY="2039.0" prefHeight="70.0" prefWidth="1206.0" styleClass="label-question" text="Хто з водіїв, учасників ДТП, заповнює пункт «Транспортний засіб А» при оформленні спільного повідомлення про дорожньо-транспортну пригоду (Європротоколу)?)" wrapText="true" />
+         <JFXRadioButton fx:id="EMRB_task11_1" layoutX="81.0" layoutY="2093.0" prefHeight="63.0" prefWidth="1234.0" text="Будь-хто з водіїв ТЗ — учасників ДТП" textFill="#01141d" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+            <toggleGroup>
+               <ToggleGroup fx:id="task_11" />
+            </toggleGroup>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task11_2" layoutX="81.0" layoutY="2135.0" prefHeight="56.0" prefWidth="1235.0" text="Винуватець ДТП" textFill="#01141d" toggleGroup="$task_11" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task11_3" layoutX="81.0" layoutY="2190.0" text="Потерпілий в ДТП" textFill="#01141d" toggleGroup="$task_11">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task11_4" layoutX="81.0" layoutY="2229.0" text="Це вирішують працівники поліції" textFill="#01141d" toggleGroup="$task_11">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <Label layoutX="12.0" layoutY="2260.0" styleClass="label-number" text="№12" textFill="#b2d609" />
+         <Label fx:id="questionLabelEM_12" layoutX="88.0" layoutY="2249.0" prefHeight="70.0" prefWidth="1206.0" styleClass="label-question" text="Який з перерахованих нижче факторів не впливає на час реакції водія?" wrapText="true" />
+         <JFXRadioButton fx:id="EMRB_task12_1" layoutX="79.0" layoutY="2302.0" prefHeight="63.0" prefWidth="1234.0" text="Вік" textFill="#01141d" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+            <toggleGroup>
+               <ToggleGroup fx:id="task_12" />
+            </toggleGroup>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task12_2" layoutX="79.0" layoutY="2344.0" prefHeight="56.0" prefWidth="1235.0" text="Освіта" textFill="#01141d" toggleGroup="$task_12" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task12_3" layoutX="79.0" layoutY="2401.0" text="Температура в салоні автомобіля" textFill="#01141d" toggleGroup="$task_12">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task12_4" layoutX="79.0" layoutY="2440.0" text="Час доби" textFill="#01141d" toggleGroup="$task_12">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task12_5" layoutX="79.0" layoutY="2475.0" text="Час перебування за кермом" textFill="#01141d" toggleGroup="$task_12">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <Label layoutX="13.0" layoutY="2502.0" styleClass="label-number" text="№13" textFill="#b2d609" />
+         <Label fx:id="questionLabelEM_13" layoutX="89.0" layoutY="2497.0" prefHeight="70.0" prefWidth="1206.0" styleClass="label-question" text="У яких випадках слід збільшити боковий інтервал?" wrapText="true" />
+         <JFXRadioButton fx:id="EMRB_task13_1" layoutX="79.0" layoutY="2535.0" prefHeight="63.0" prefWidth="1234.0" text="При зустрічному роз'їзді з великою швидкістю" textFill="#01141d" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+            <toggleGroup>
+               <ToggleGroup fx:id="task_13" />
+            </toggleGroup>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task13_2" layoutX="79.0" layoutY="2577.0" prefHeight="56.0" prefWidth="1235.0" text="Під час роз'їзду з довгомірним транспортним засобом" textFill="#01141d" toggleGroup="$task_13" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task13_3" layoutX="79.0" layoutY="2632.0" text="Під час руху мокрим, слизьким або нерівним покриттям" textFill="#01141d" toggleGroup="$task_13">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task13_4" layoutX="79.0" layoutY="2671.0" text="У всіх наведених випадках" textFill="#01141d" toggleGroup="$task_13">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <Label layoutX="14.0" layoutY="2703.0" styleClass="label-number" text="№14" textFill="#b2d609" />
+         <Label fx:id="questionLabelEM_14" layoutX="90.0" layoutY="2698.0" prefHeight="70.0" prefWidth="1206.0" styleClass="label-question" text="Адміністративне затримання особи, яка вчинила адміністративне правопорушення, може тривати не більше ніж:" wrapText="true" />
+         <JFXRadioButton fx:id="EMRB_task14_1" layoutX="80.0" layoutY="2736.0" prefHeight="63.0" prefWidth="1234.0" text="П'ять годин" textFill="#01141d" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+            <toggleGroup>
+               <ToggleGroup fx:id="task_14" />
+            </toggleGroup>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task14_2" layoutX="80.0" layoutY="2778.0" prefHeight="56.0" prefWidth="1235.0" text="Три години" textFill="#01141d" toggleGroup="$task_14" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task14_3" layoutX="81.0" layoutY="2822.0" prefHeight="56.0" prefWidth="1235.0" text="Чотири години" textFill="#01141d" toggleGroup="$task_14" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <Label layoutX="13.0" layoutY="2869.0" styleClass="label-number" text="№15" textFill="#b2d609" />
+         <Label fx:id="questionLabelEM_15" layoutX="89.0" layoutY="2864.0" prefHeight="70.0" prefWidth="1206.0" styleClass="label-question" text="Ви маєте право експлуатувати легковий автомобіль за відсутності:" wrapText="true" />
+         <JFXRadioButton fx:id="EMRB_task15_1" layoutX="79.0" layoutY="2902.0" prefHeight="63.0" prefWidth="1234.0" text="Аптечки" textFill="#01141d" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+            <toggleGroup>
+               <ToggleGroup fx:id="task_15" />
+            </toggleGroup>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task15_2" layoutX="79.0" layoutY="2944.0" prefHeight="56.0" prefWidth="1235.0" text="Вогнегасника" textFill="#01141d" toggleGroup="$task_15" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task15_3" layoutX="79.0" layoutY="2999.0" text="Знака аварійної зупинки" textFill="#01141d" toggleGroup="$task_15">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task15_4" layoutX="79.0" layoutY="3038.0" text="Противідкотних упорів" textFill="#01141d" toggleGroup="$task_15">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <Label layoutX="12.0" layoutY="3097.0" styleClass="label-number" text="№16" textFill="#b2d609" />
+         <Label fx:id="questionLabelEM_16" layoutX="88.0" layoutY="3071.0" prefHeight="108.0" prefWidth="1206.0" styleClass="label-question" text="Під час руху по дорозі поза населеним пунктом Ви зібралися зробити обгін вантажного автомобіля. Після ввімкнення Вами лівого покажчика повороту водій вантажного автомобіля ввімкнув та вимкнув сигнал лівого повороту. Що це може означати?" wrapText="true" />
+         <JFXRadioButton fx:id="EMRB_task16_1" layoutX="77.0" layoutY="3162.0" prefHeight="63.0" prefWidth="1234.0" text="Водій вантажного автомобіля зібрався сам виконати обгін, але, побачивши Ваші дії, відмовився від запланованого" textFill="#01141d" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+            <toggleGroup>
+               <ToggleGroup fx:id="task_16" />
+            </toggleGroup>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task16_2" layoutX="76.0" layoutY="3215.0" prefHeight="56.0" prefWidth="1235.0" text="Водій вантажного автомобіля попереджає Вас про небезпеку під час здійснення обгону, яку Ви не в змозі виявити" textFill="#01141d" toggleGroup="$task_16" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task16_3" layoutX="74.0" layoutY="3258.0" prefHeight="56.0" prefWidth="1235.0" text="Водій вантажного автомобіля, порушуючи Правила, перешкоджає виконанню обгону" textFill="#01141d" toggleGroup="$task_16" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <Label layoutX="13.0" layoutY="3311.0" styleClass="label-number" text="№17" textFill="#b2d609" />
+         <Label fx:id="questionLabelEM_17" layoutX="89.0" layoutY="3306.0" prefHeight="70.0" prefWidth="1206.0" styleClass="label-question" text="В якому випадку слід припинити проведення серцево-легеневої реанімації у постраждалих?" wrapText="true" />
+         <JFXRadioButton fx:id="EMRB_task17_1" layoutX="79.0" layoutY="3344.0" prefHeight="63.0" prefWidth="1234.0" text="Поява ознак життя (дихання, свідомість)" textFill="#01141d" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+            <toggleGroup>
+               <ToggleGroup fx:id="task_17" />
+            </toggleGroup>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task17_2" layoutX="81.0" layoutY="3385.0" prefHeight="56.0" prefWidth="1235.0" text="Через 15 хвилин проведення серцево-легеневої реанімації" textFill="#01141d" toggleGroup="$task_17" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task17_3" layoutX="79.0" layoutY="3441.0" text="Через 30 хвилин проведення серцево-легеневої реанімації" textFill="#01141d" toggleGroup="$task_17">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <Label layoutX="10.0" layoutY="3470.0" styleClass="label-number" text="№18" textFill="#b2d609" />
+         <Label fx:id="questionLabelEM_18" layoutX="88.0" layoutY="3471.0" prefHeight="70.0" prefWidth="1206.0" styleClass="label-question" text="Увімкнення яких зовнішніх світлових приладів забезпечить вам найкращу видимість дороги під час руху вночі за сильної хуртовини?" wrapText="true" />
+         <JFXRadioButton fx:id="EMRB_task18_1" layoutX="78.0" layoutY="3525.0" prefHeight="63.0" prefWidth="1234.0" text="Протитуманних фар спільно з ближнім світлом фар" textFill="#01141d" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+            <toggleGroup>
+               <ToggleGroup fx:id="task_18" />
+            </toggleGroup>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task18_2" layoutX="78.0" layoutY="3567.0" prefHeight="56.0" prefWidth="1235.0" text="Протитуманних фар спільно з дальнім світлом фар" textFill="#01141d" toggleGroup="$task_18" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <Label layoutX="13.0" layoutY="3608.0" styleClass="label-number" text="№19" textFill="#b2d609" />
+         <Label fx:id="questionLabelEM_19" layoutX="89.0" layoutY="3603.0" prefHeight="70.0" prefWidth="1206.0" styleClass="label-question" text="Яку максимальну кількість пасажирів має право перевозити водій з категорією “В”?" wrapText="true" />
+         <JFXRadioButton fx:id="EMRB_task19_1" layoutX="79.0" layoutY="3641.0" prefHeight="63.0" prefWidth="1234.0" text="Менше дев'яти" textFill="#01141d" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+            <toggleGroup>
+               <ToggleGroup fx:id="task_19" />
+            </toggleGroup>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task19_2" layoutX="79.0" layoutY="3683.0" prefHeight="56.0" prefWidth="1235.0" text="Більше сімнадцяти" textFill="#01141d" toggleGroup="$task_19" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task19_3" layoutX="79.0" layoutY="3738.0" text="Більше дев'яти" textFill="#01141d" toggleGroup="$task_19">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <Label layoutX="13.0" layoutY="3770.0" styleClass="label-number" text="№20" textFill="#b2d609" />
+         <Label fx:id="questionLabelEM_20" layoutX="89.0" layoutY="3765.0" prefHeight="70.0" prefWidth="1206.0" styleClass="label-question" text="Що першочергово потрібно зробити при наданні домедичної допомоги постраждалому при ДТП?" wrapText="true" />
+         <JFXRadioButton fx:id="EMRB_task20_1" layoutX="79.0" layoutY="3803.0" prefHeight="63.0" prefWidth="1234.0" text="Переконатися у відсутності небезпеки" textFill="#01141d" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+            <toggleGroup>
+               <ToggleGroup fx:id="task_20" />
+            </toggleGroup>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task20_2" layoutX="79.0" layoutY="3845.0" prefHeight="56.0" prefWidth="1235.0" text="Спочатку необхідно впевнитись в наявності дихання у постраждалого" textFill="#01141d" toggleGroup="$task_20" wrapText="true">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+         <JFXRadioButton fx:id="EMRB_task20_3" layoutX="79.0" layoutY="3900.0" text="Спочатку треба відновити прохідність дихальних шляхів" textFill="#01141d" toggleGroup="$task_20">
+            <unSelectedColor>
+               <Color red="0.003921568859368563" green="0.0784313753247261" blue="0.11372549086809158" />
+            </unSelectedColor>
+         </JFXRadioButton>
+      </AnchorPane>
+   </ScrollPane>
+</Pane>

@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'Mariupol-Regular';
+    src: url('Mariupol-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Lena';
+    src: url('Lena.ttf');
+}
+
+.root {                                                                                           /* Стиль фону вікна */
+    -fx-background-color: #F5F5F5;
+}
+
+.label-for-logo {                                                                                  /* Стиль заголовку */
+    -fx-font-size: 45px;
+    -fx-font-family: 'Lena';
+    -fx-text-fill: #005B99;
+    -fx-font-weight: bold;
+}
+
+.label-for-role {                                                                                /* Стиль тексту ролі */
+    -fx-font-size: 20px;
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-text-fill: #5c5c5c;
+    -fx-padding: 5;
+    -fx-background-color: #ebebeb;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-effect: innershadow(gaussian, #c2c2c2, 10, 0, 0, 0);
+}
+
+.jfx-button {                                                                                         /* Стиль кнопок */
+    -fx-font-size: 20px;
+    -fx-background-color: #ebebeb;
+    -fx-text-fill: #333333; /* Колір тексту кнопки */
+    -fx-font-family: "Mariupol-Regular";
+    -fx-transition: all 1.0s;
+}
+
+.jfx-button:hover {
+    -fx-background-color: #005B99;
+    -fx-text-fill: #b7e9ff; /* Колір тексту кнопки при наведенні миші */
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.jfx-exit-button {                                                                       /* Стиль кнопок кнопки виходу*/
+    -fx-font-size: 20px;
+    -fx-background-color: #ebebeb;
+    -fx-text-fill: #333333; /* Колір тексту кнопки */
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-transition: all 1.0s
+}
+
+.jfx-exit-button:hover{
+    -fx-background-color: #c0392b;
+    -fx-text-fill: #ffcdc9;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.label-for-normal {                                                                                   /* Стиль тексту */
+    -fx-font-size: 20px;
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-text-fill: #5c5c5c;
+    -fx-padding: 5;
+    -fx-background-color: #ebebeb;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-effect: innershadow(gaussian, #c2c2c2, 10, 0, 0, 0);
+}
+
+.error-label {                                                                          /* Стиль повідомлення-помилки */
+    -fx-font-size: 20px;
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-text-fill: #ff2020;
+}
+
+.text-field {                                                                                    /* Стиль полів вводу */
+   -fx-font-size: 17px;
+   -fx-font-family: 'Mariupol-Regular';
+   -fx-text-fill: #5c5c5c;
+   -fx-padding: 5;
+   -fx-background-color: #ebebeb;
+   -fx-background-radius: 6;
+   -fx-border-radius: 6;
+   -fx-border-color: #c2c2c2;
+}
+
+.radio-button {                                                                                 /* Стиль радіо кнопок */
+   -fx-font-size: 17px;
+   -fx-font-family: 'Mariupol-Regular';
+   -fx-text-fill: #5c5c5c;
+   -fx-padding: 5;
+}
+
+.text-field-password {                                                                       /* Стиль поля для паролю */
+    -fx-control-inner-background: #005B99;
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-font-weight: bold; /* Рядок для зроблення тексту жирним */
+}

@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'Mariupol-Regular';
+    src: url('Mariupol-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Lena';
+    src: url('Lena.ttf');
+}
+
+.root {                                                                                           /* Стиль фону вікна */
+    -fx-background-color: #9fbdcc;
+}
+
+.sidebar {                                                                                           /* Стиль фону вікна */ //треба
+    -fx-background-color: #eeeeee;
+    -fx-effect: innershadow(gaussian, #F5F5F5, 20, 0, 0, 0);
+}
+
+.menuItem {                                                                                /* Стиль кнопок меню зверху*/ //треба
+    -fx-font-size: 20px;
+    -fx-background-color: #ebebeb;
+    -fx-text-fill: #333333; /* Колір тексту кнопки */
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-transition: all 1.0s;
+}
+
+.menu-item:hover,
+.menu-item-clicked {
+    /* Common styles for hover and clicked state */
+    -fx-border-color: #005B99;
+    -fx-border-width: 0px 0px 3px 0px;
+}
+
+.sidebarItem {                                                                           /* Стиль кнопок меню слайдера*/ //треба
+    -fx-font-size: 18px;
+        -fx-background-color: #ebebeb;
+        -fx-text-fill: #333333; /* Колір тексту кнопки */
+        -fx-font-family: 'Mariupol-Regular';
+        -fx-transition: all 1.0s
+}
+
+.sidebar-item:hover,
+.sidebar-item-clicked {
+    /* Common styles for hover and clicked state in the sidebar */
+    -fx-background-color: #146886;
+    -fx-border-color: WHITE;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+
+.sidebarItemExit {                                                              /* Стиль кнопок кнопки виходу слайдера*/ //треба
+    -fx-font-size: 18px;
+        -fx-background-color: #ebebeb;
+        -fx-text-fill: #333333; /* Колір тексту кнопки */
+        -fx-font-family: 'Mariupol-Regular';
+        -fx-transition: all 1.0s
+}
+
+.sidebarItemExit:hover{
+    -fx-background-color: #c0392b;
+    -fx-border-color: WHITE;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+
+
+
+.label-for-logo {                                                                            /* Стиль тексту заголовку*/
+    -fx-font-size: 45px;
+    -fx-font-family: 'Lena';
+    -fx-text-fill: #005B99;
+    -fx-font-weight: bold;
+}
+
+.label-for-normal {                                                                            /* Стиль тексту з фоном*/ //треба
+   -fx-font-size: 20px;
+   -fx-font-family: 'Mariupol-Regular';
+   -fx-text-fill: #5c5c5c;
+   -fx-padding: 5;
+   -fx-background-color: #ebebeb;
+   -fx-background-radius: 6;
+   -fx-border-radius: 6;
+   -fx-effect: innershadow(gaussian, #c2c2c2, 10, 0, 0, 0);
+}
+
+
+
+.label-form {                                                                                   /* Стиль звичайного тексту */
+   -fx-font-size: 20px;
+   -fx-font-family: 'Mariupol-Regular';
+   -fx-text-fill: #01141D;
+   -fx-padding: 5;
+}
+
+.label-search{                                                                                   /* Стиль звичайного тексту */ //треба
+   -fx-font-size: 24px;
+   -fx-font-family: 'Lena';
+   -fx-text-fill: #01141D;
+   -fx-padding: 5;
+}
+
+.label-for-header{                                                                            /* Стиль тексту заголовку*/ //треба
+    -fx-font-size: 45px;
+    -fx-font-family: 'Lena';
+    -fx-text-fill: #005B99;
+    -fx-font-weight: bold;
+}
+
+
+
+.my-button {                                                                                /* Стиль звичайної кнопки */ //треба
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-pref-width: 200px; /* Задайте бажаний розмір кнопок */
+    -fx-pref-height: 40px;
+    -fx-font-size: 16px; /* Задайте розмір шрифту кнопок */
+    -fx-border-color: #01141d;
+}
+
+.jfx-button-add{                                                                       /* Стиль кнопок кнопки виходу*/
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-font-size: 20px;
+    -fx-pref-width: 200px; /* Задайте бажаний розмір кнопок */
+    -fx-pref-height: 40px;
+    -fx-border-color: #01141d;
+    -fx-background-color: #ebebeb;
+    -fx-text-fill: #333333; /* Колір тексту кнопки */
+    -fx-transition: all 1.0s
+}
+
+.jfx-button-add:hover{
+    -fx-background-color: #68a67d;
+    -fx-text-fill: #F7EEDD;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.jfx-button-split-members{                                                                       /* Стиль кнопок кнопки виходу*/
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-font-size: 30px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #005B99; /* Колір тексту кнопки */
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 5, 5);
+    -fx-border-color: #01141d;
+    -fx-border-width: 2px; /* Ширина рамки кнопки */
+    -fx-border-style: solid; /* Стиль рамки кнопки */
+    -fx-border-radius: 20;
+    -fx-transition: all 3.0s
+}
+
+.jfx-button-split-members:hover{
+    -fx-background-color: #8aee81;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+
+.jfx-button-split-tests{                                                                       /* Стиль кнопок кнопки виходу*/
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-font-size: 35px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #005B99; /* Колір тексту кнопки */
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 5, 5);
+    -fx-border-color: #01141d;
+    -fx-border-width: 2px; /* Ширина рамки кнопки */
+    -fx-border-style: solid; /* Стиль рамки кнопки */
+    -fx-border-radius: 20;
+    -fx-transition: all 3.0s
+}
+
+.jfx-button-split-tests:hover{
+    -fx-background-color: #FFD700;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.combobox {                                                                                           /* Стиль списку */
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-font-size: 16px; /* Задайте розмір шрифту кнопок */
+    -fx-border-color: #01141d;
+    -fx-background-color: #9FBDCC;
+    -fx-text-fill: #5c5c5c;
+}
+
+.text-field {                                                                                    /* Стиль полів вводу */ //треба
+   -fx-font-size: 17px;
+   -fx-font-family: 'Mariupol-Regular';
+   -fx-text-fill: #5c5c5c;
+   -fx-padding: 5;
+   -fx-background-color: #ebebeb;
+   -fx-background-radius: 6;
+   -fx-border-radius: 6;
+   -fx-border-color: #c2c2c2;
+}
+
+.radio-button {                                                                                 /* Стиль радіо кнопок */
+   -fx-font-size: 17px;
+   -fx-font-family: 'Mariupol-Regular';
+   -fx-text-fill: #5c5c5c;
+   -fx-padding: 5;
+}
+
+
+
+
+
+
+
+.text-field-password {                                                                       /* Стиль поля для паролю */
+    -fx-control-inner-background: #005B99;
+    -fx-font-family: 'Mariupol-Regular';
+    -fx-font-weight: bold; /* Рядок для зроблення тексту жирним */
+}

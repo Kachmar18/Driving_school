@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="680.0" prefWidth="1400.0" style="-fx-background-color: #9FBDCC;" stylesheets="@Css/menu-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoschool.autoschool_javafx.SettingsWindow">
+   <JFXButton fx:id="editAccountButton" alignment="BASELINE_LEFT" layoutX="70.0" layoutY="110.0" minHeight="45.0" minWidth="800.0" onAction="#editAccountButton" prefHeight="45.0" prefWidth="758.0" style="-fx-font-size: 25;" styleClass="my-button" text="Редагувати дані">
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <padding>
+         <Insets left="10.0" />
+      </padding>
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@Icons/edit_icon.png" />
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <JFXButton fx:id="languageButton" alignment="CENTER" layoutX="450.0" layoutY="250.0" minHeight="45.0" minWidth="880.0" onAction="#switchLanguageButton" prefHeight="45.0" prefWidth="880.0" style="-fx-font-size: 25;" styleClass="my-button" text="Українська">
+      <graphic>
+         <ImageView fx:id="switchLanguageIcon" fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@Icons/UkraineFlag_icon.png" />
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <JFXButton fx:id="deleteAccountButton" alignment="BASELINE_LEFT" layoutX="970.0" layoutY="110.0" minHeight="45.0" minWidth="360.0" onAction="#deleteAccountButton" prefHeight="45.0" prefWidth="356.0" style="-fx-font-size: 25;" styleClass="my-button" text="Видалити акаунт">
+      <graphic>
+         <ImageView fitHeight="78.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@Icons/delete_icon.png" />
+         </ImageView>
+      </graphic>
+      <padding>
+         <Insets left="10.0" />
+      </padding>
+   </JFXButton>
+   <Label fx:id="languageLabel" layoutX="70.0" layoutY="250.0" style="-fx-font-size: 30;" styleClass="label-form" text="Мова застосунку">
+      <padding>
+         <Insets left="50.0" />
+      </padding>
+   </Label>
+   <Label fx:id="accountLabel" layoutX="70.0" layoutY="50.0" style="-fx-font-size: 30;" styleClass="label-form" text="Акаунт">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <padding>
+         <Insets left="50.0" />
+      </padding>
+   </Label>
+   <ImageView fitHeight="78.0" fitWidth="27.0" layoutX="834.0" layoutY="119.0" onMouseClicked="#editAccountButton" pickOnBounds="true" preserveRatio="true">
+      <Image url="@Icons/right_arrow_icon.png" />
+   </ImageView>
+   <ImageView fitHeight="78.0" fitWidth="27.0" layoutX="1292.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@Icons/right_arrow_icon.png" />
+   </ImageView>
+   <Text layoutX="225.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+</Pane>
